@@ -1,0 +1,1509 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chaitanyaved Ayurved</title>
+<meta name="description" content="Chaitanyaved Ayurved Chikitsalay & Panchkarma Kendra: classical Ayurveda, Panchakarma and personalised consultation, guided by physicians.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Marcellus&family=Mukta:wght@400;500;600&family=Tiro+Devanagari+Marathi&display=swap">
+<style>
+/* Layout: editorial wellness journal. A copper-and-leaf 3D hero, then alternating
+   wide/narrow bands; catalogue as a quiet index of hairline-ruled cards. */
+:root{
+  --bg:#F7F4ED; --surface:#FFFDF8; --sage:#E5EEE7; --forest:#245F4C; --euca:#4F8B70;
+  --gold:#B8864B; --ink:#17352D; --muted:#55685F; --line:rgba(23,53,45,.14); --line-strong:rgba(23,53,45,.28);
+  --glass:rgba(255,253,248,.74); --on-accent:#FFFDF8; --shadow:0 18px 50px -24px rgba(23,53,45,.35);
+  --copper:#A9643B; --danger:#9A3B2A; --art-a:#4F8B70; --art-b:#B8864B;
+  --f-display:"Marcellus","Tiro Devanagari Marathi",Georgia,serif;
+  --f-body:"Hanken Grotesk","Mukta",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-deva:"Tiro Devanagari Marathi","Mukta",serif;
+  --r:4px; --wrap:1200px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#07110F; --surface:#0D1B17; --sage:#12241E; --forest:#9BC6A8; --euca:#9BC6A8;
+  --gold:#D7B56F; --ink:#F2EEE4; --muted:#AAB5AD; --line:rgba(242,238,228,.12); --line-strong:rgba(242,238,228,.26);
+  --glass:rgba(13,27,23,.72); --on-accent:#07110F; --shadow:0 24px 60px -28px rgba(0,0,0,.8);
+  --copper:#D08A5C; --danger:#E08A74; --art-a:#9BC6A8; --art-b:#D7B56F; color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --bg:#07110F; --surface:#0D1B17; --sage:#12241E; --forest:#9BC6A8; --euca:#9BC6A8;
+  --gold:#D7B56F; --ink:#F2EEE4; --muted:#AAB5AD; --line:rgba(242,238,228,.12); --line-strong:rgba(242,238,228,.26);
+  --glass:rgba(13,27,23,.72); --on-accent:#07110F; --shadow:0 24px 60px -28px rgba(0,0,0,.8);
+  --copper:#D08A5C; --danger:#E08A74; --art-a:#9BC6A8; --art-b:#D7B56F; color-scheme:dark;}
+html[lang="mr"]{--f-display:"Tiro Devanagari Marathi","Marcellus",serif; --f-body:"Mukta","Hanken Grotesk",system-ui,sans-serif}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.6;overflow-x:hidden}
+html.theming *, html.theming *::before{transition:background-color .5s ease,color .5s ease,border-color .5s ease,fill .5s ease !important}
+h1,h2,h3,h4{font-family:var(--f-display);font-weight:400;line-height:1.12;margin:0;text-wrap:balance;letter-spacing:-.005em}
+html[lang="mr"] h1,html[lang="mr"] h2,html[lang="mr"] h3{line-height:1.3}
+p{margin:0}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:clamp(16px,4vw,40px)}
+.eyebrow{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600}
+html[lang="mr"] .eyebrow{letter-spacing:.04em;font-size:.86rem}
+.deva{font-family:var(--f-deva)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:16px;top:-60px;z-index:200;background:var(--forest);color:var(--on-accent);padding:10px 14px;border-radius:var(--r)}
+.skip:focus{top:12px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:46px;padding:0 22px;border-radius:999px;border:1px solid transparent;font-weight:600;font-size:.95rem;cursor:pointer;text-decoration:none;transition:transform .25s ease,background-color .25s,box-shadow .25s,border-color .25s;white-space:nowrap}
+.btn-primary{background:var(--forest);color:var(--on-accent)}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 10px 24px -12px var(--forest)}
+.btn-ghost{border-color:var(--line-strong);background:transparent;color:var(--ink)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.btn-sm{min-height:38px;padding:0 16px;font-size:.88rem}
+.link{background:none;border:0;padding:0;cursor:pointer;color:var(--forest);font-weight:600;font-size:.92rem;display:inline-flex;align-items:center;gap:.35em;border-bottom:1px solid transparent}
+.link:hover{border-bottom-color:currentColor}
+.pend{display:inline-flex;align-items:center;gap:6px;font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:var(--gold);border:1px dashed color-mix(in srgb,var(--gold) 60%,transparent);border-radius:999px;padding:2px 9px;white-space:nowrap}
+html[lang="mr"] .pend{text-transform:none;letter-spacing:0;font-size:.78rem}
+.pend::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.8}
+.ph-text{color:var(--muted);font-style:italic}
+
+/* loader */
+.loader{position:fixed;inset:0;z-index:300;background:var(--bg);display:grid;place-items:center;animation:loaderOut .6s ease 1.4s forwards;pointer-events:none}
+.loader.done{animation:loaderOut .5s ease forwards}
+.loader-mark{width:64px;height:64px;border-radius:50%;border:1px solid var(--line-strong);border-top-color:var(--gold);animation:spin 1.1s linear infinite;display:grid;place-items:center}
+.loader-mark span{font-family:var(--f-deva);color:var(--forest);font-size:1.5rem;animation:spin 1.1s linear infinite reverse}
+@keyframes loaderOut{to{opacity:0;visibility:hidden}}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* nav */
+.nav{position:fixed;left:0;right:0;top:0;z-index:100;padding:calc(env(safe-area-inset-top,0px) + 12px) clamp(12px,2.4vw,28px) 0}
+.nav-in{max-width:1320px;margin-inline:auto;display:flex;align-items:center;gap:14px;padding:8px 10px 8px 18px;border-radius:999px;background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(18px) saturate(1.2);-webkit-backdrop-filter:blur(18px) saturate(1.2);box-shadow:var(--shadow)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0;cursor:pointer;background:none;border:0;padding:0}
+.brand-mark{width:34px;height:34px;flex:none;color:var(--forest)}
+.brand-text{display:flex;flex-direction:column;line-height:1.05;min-width:0;text-align:left}
+.brand-name{font-family:var(--f-display);font-size:1.18rem;color:var(--ink)}
+.brand-sub{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+html[lang="mr"] .brand-sub{letter-spacing:0;text-transform:none;font-size:.72rem}
+.nav-links{display:flex;gap:2px;margin-left:auto;list-style:none;padding:0;margin-block:0}
+.nav-links button{background:none;border:0;cursor:pointer;padding:8px 10px;font-size:.86rem;color:var(--ink);border-radius:999px;white-space:nowrap}
+.nav-links button:hover{background:var(--sage)}
+.nav-tools{display:flex;align-items:center;gap:8px;margin-left:8px}
+.seg{display:flex;border:1px solid var(--line);border-radius:999px;padding:2px}
+.seg button{border:0;background:none;cursor:pointer;padding:5px 10px;border-radius:999px;font-size:.8rem;font-weight:600;color:var(--muted)}
+.seg button[aria-pressed="true"]{background:var(--forest);color:var(--on-accent)}
+.seg .deva{font-size:.88rem}
+.icon-btn{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:none;cursor:pointer;display:grid;place-items:center;color:var(--ink);flex:none}
+.icon-btn:hover{border-color:var(--gold);color:var(--gold)}
+.theme-ic{width:20px;height:20px}
+.theme-ic .sun-rays{transition:opacity .4s,transform .5s;transform-origin:12px 12px}
+.theme-ic .moon-cut{transition:transform .5s ease}
+html.is-dark .theme-ic .sun-rays{opacity:0;transform:rotate(-60deg) scale(.6)}
+html:not(.is-dark) .theme-ic .moon-cut{transform:translate(10px,-10px)}
+.menu-btn{display:none}
+.nav-cta{display:inline-flex}
+@media (max-width:1240px){.nav-links{display:none}.menu-btn{display:grid}.nav-tools{margin-left:auto}}
+@media (max-width:640px){.nav-cta,.brand-sub{display:none}.nav-in{padding-left:12px}.seg button{padding:5px 8px}}
+/* English navigation: three-zone grid (brand | centred links | tools) */
+html[lang="en"] .nav-in{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:14px;max-width:1400px;min-height:58px;padding:6px 8px 6px 14px}
+html[lang="en"] .brand{flex:none}
+html[lang="en"] .brand-text{gap:3px}
+html[lang="en"] .brand-name{font-size:1.14rem}
+html[lang="en"] .brand-sub{white-space:normal;overflow:visible;max-width:15em;font-size:.58rem;letter-spacing:.1em;line-height:1.3}
+html[lang="en"] .nav-links{margin:0;min-width:0;justify-content:center;gap:0}
+html[lang="en"] .nav-links li{display:flex}
+html[lang="en"] .nav-links button{position:relative;min-height:38px;padding:0 8px;font-size:.82rem;font-weight:500;color:var(--muted);transition:color .2s,background-color .2s}
+html[lang="en"] .nav-links button:hover{background:var(--sage);color:var(--ink)}
+html[lang="en"] .nav-links button[aria-current="true"]{color:var(--forest)}
+html[lang="en"] .nav-links button[aria-current="true"]::after{content:"";position:absolute;left:50%;bottom:3px;width:4px;height:4px;border-radius:50%;background:var(--gold);transform:translateX(-50%)}
+html[lang="en"] .nav-tools{margin:0;gap:6px}
+html[lang="en"] .nav-tools .icon-btn{width:38px;height:38px}
+html[lang="en"] .nav-tools .seg button{padding:5px 9px}
+html[lang="en"] .nav-cta{min-height:38px;padding:0 16px;font-size:.84rem}
+@media (min-width:1400px){
+  html[lang="en"] .nav-links{display:flex}
+  html[lang="en"] .menu-btn{display:none}
+  html[lang="en"] .nav-tools{padding-left:12px;border-left:1px solid var(--line)}
+}
+@media (max-width:1399px){
+  html[lang="en"] .nav-links{display:none}
+  html[lang="en"] .menu-btn{display:grid}
+  html[lang="en"] .nav-tools{grid-column:3}
+}
+@media (max-width:640px){html[lang="en"] .nav-in{gap:8px;padding-left:12px}}
+.drawer{position:fixed;inset:0;z-index:150;background:color-mix(in srgb,var(--bg) 60%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.drawer-in{position:absolute;right:12px;left:12px;top:calc(env(safe-area-inset-top,0px) + 76px);background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:12px;box-shadow:var(--shadow);max-height:calc(100% - 96px);overflow:auto}
+.drawer-in button.dl{display:flex;width:100%;justify-content:space-between;background:none;border:0;border-bottom:1px solid var(--line);padding:14px 8px;font-family:var(--f-display);font-size:1.25rem;cursor:pointer;text-align:left}
+.drawer-in button.dl:last-of-type{border-bottom:0}
+.drawer-in .btn{width:100%;margin-top:10px}
+
+/* hero */
+.hero{position:relative;padding-top:calc(env(safe-area-inset-top,0px) + 112px);padding-bottom:56px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 55% at 78% 40%,color-mix(in srgb,var(--euca) 16%,transparent),transparent 70%),radial-gradient(40% 40% at 10% 90%,color-mix(in srgb,var(--gold) 10%,transparent),transparent 70%);pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);gap:clamp(20px,4vw,56px);align-items:center}
+.hero-copy{min-width:0;display:flex;flex-direction:column;gap:22px}
+.hero-shloka{font-family:var(--f-deva);color:var(--gold);font-size:1rem;letter-spacing:.04em}
+.hero h1{font-size:clamp(2.5rem,5.6vw,5rem);color:var(--ink)}
+.hero h1 em{font-style:normal;color:var(--forest)}
+.hero-sub{font-size:clamp(1rem,1.3vw,1.14rem);color:var(--muted);max-width:52ch}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero-pts{display:flex;flex-wrap:wrap;gap:8px 22px;padding:16px 0 0;margin:0;list-style:none;border-top:1px solid var(--line);font-size:.88rem;color:var(--muted)}
+.hero-pts li{display:flex;align-items:center;gap:8px}
+.hero-pts li::before{content:"";width:7px;height:7px;transform:rotate(45deg);background:var(--gold)}
+.scene-col{position:relative;min-width:0}
+.scene-wrap{position:relative;aspect-ratio:1/1.02;max-width:100%;width:100%;border-radius:50% 50% 8px 8px / 42% 42% 8px 8px;overflow:hidden;background:radial-gradient(70% 60% at 50% 40%,color-mix(in srgb,var(--sage) 90%,transparent),transparent 75%);border:1px solid var(--line)}
+.scene-wrap canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.scene-wrap.fallback{background:radial-gradient(circle at 50% 38%,var(--euca) 0 22%,transparent 23%),radial-gradient(ellipse 26% 30% at 46% 66%,var(--copper) 0 98%,transparent 100%),radial-gradient(70% 60% at 50% 40%,var(--sage),var(--bg))}
+.scene-cap{position:absolute;right:16px;top:18px;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);writing-mode:vertical-rl;z-index:2}
+html[lang="mr"] .scene-cap{letter-spacing:.02em;text-transform:none;font-size:.8rem}
+.panel{position:absolute;left:-28px;bottom:24px;z-index:3;width:min(330px,82%);background:var(--glass);backdrop-filter:blur(18px) saturate(1.2);-webkit-backdrop-filter:blur(18px) saturate(1.2);border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:12px}
+.panel h2{font-size:1.2rem}
+.panel .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.fld{display:flex;flex-direction:column;gap:6px;min-width:0}
+.fld label{font-size:.76rem;font-weight:600;color:var(--muted);letter-spacing:.02em}
+.inp{width:100%;min-height:44px;padding:9px 12px;background:var(--surface);border:1px solid var(--line-strong);border-radius:var(--r);font-size:.95rem;color:var(--ink)}
+.inp:focus{outline:none;border-color:var(--forest);box-shadow:0 0 0 3px color-mix(in srgb,var(--forest) 18%,transparent)}
+textarea.inp{min-height:110px;resize:vertical}
+@media (max-width:900px){
+  .hero{padding-top:calc(env(safe-area-inset-top,0px) + 96px)}
+  .hero-grid{grid-template-columns:minmax(0,1fr)}
+  .scene-wrap{aspect-ratio:1/0.86}
+  .panel{position:relative;left:auto;bottom:auto;width:100%;margin-top:-56px}
+}
+
+/* sections */
+section{scroll-margin-top:90px}
+.band{padding-block:clamp(64px,9vw,120px)}
+.band-alt{background:var(--surface);border-block:1px solid var(--line)}
+.head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px 48px;align-items:end;margin-bottom:clamp(32px,5vw,56px)}
+.head h2{font-size:clamp(2rem,4vw,3.3rem)}
+.head .lede{color:var(--muted);max-width:56ch}
+.head-l{display:flex;flex-direction:column;gap:14px}
+@media (max-width:800px){.head{grid-template-columns:minmax(0,1fr)}}
+.reveal.in{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{transform:translateY(18px);opacity:.35}to{transform:none;opacity:1}}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(28px,6vw,80px)}
+.about-body{display:flex;flex-direction:column;gap:18px;font-size:1.06rem;max-width:60ch}
+.about-body p:first-child::first-letter{font-family:var(--f-display);float:left;font-size:3.6em;line-height:.9;padding:6px 10px 0 0;color:var(--gold)}
+html[lang="mr"] .about-body p:first-child::first-letter{float:none;font-size:inherit;padding:0;color:inherit}
+.pillars{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.pillar{padding:22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:8px}
+.pillar svg{width:30px;height:30px;color:var(--euca)}
+.pillar h3{font-size:1.2rem}
+.pillar p{color:var(--muted);font-size:.93rem}
+.note{margin-top:22px;font-size:.86rem;color:var(--muted);display:flex;gap:10px;align-items:flex-start}
+.note::before{content:"";flex:none;width:14px;height:1px;background:var(--gold);margin-top:.75em}
+@media (max-width:860px){.about-grid{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:480px){.pillars{grid-template-columns:1fr}}
+
+/* doctors */
+.docs{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,3vw,32px)}
+.doc{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s;transform-style:preserve-3d}
+.doc:hover{box-shadow:var(--shadow)}
+.doc-photo{position:relative;min-height:300px;background:linear-gradient(160deg,var(--sage),color-mix(in srgb,var(--euca) 30%,var(--sage)));display:grid;place-items:center;color:color-mix(in srgb,var(--forest) 55%,transparent)}
+.doc-photo svg{width:46%;height:auto}
+.doc-photo .ph-lab{position:absolute;left:12px;bottom:12px;font-size:.72rem;background:var(--glass);padding:4px 10px;border-radius:999px;color:var(--ink)}
+.doc-body{padding:24px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.doc-body h3{font-size:1.45rem}
+.doc dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 14px;font-size:.9rem}
+.doc dt{color:var(--muted)}
+.doc dd{margin:0}
+@media (max-width:980px){.docs{grid-template-columns:1fr}}
+@media (max-width:520px){.doc{grid-template-columns:1fr}.doc-photo{min-height:220px}}
+
+/* catalogue */
+.banner{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border:1px dashed color-mix(in srgb,var(--gold) 55%,transparent);border-radius:var(--r);background:color-mix(in srgb,var(--gold) 7%,transparent);font-size:.9rem;margin-bottom:24px}
+.banner svg{flex:none;width:18px;height:18px;color:var(--gold);margin-top:3px}
+.toolbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-bottom:24px;position:sticky;top:calc(env(safe-area-inset-top,0px) + 76px);z-index:20;padding:10px 0;background:var(--bg)}
+.band-alt .toolbar{background:var(--surface)}
+.chips{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;max-width:100%;padding-bottom:2px}
+.chips::-webkit-scrollbar{display:none}
+.chip{border:1px solid var(--line-strong);background:transparent;border-radius:999px;padding:7px 14px;font-size:.86rem;cursor:pointer;white-space:nowrap;color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.search{position:relative;flex:1 1 260px;max-width:360px}
+.search svg{position:absolute;left:12px;top:50%;width:16px;height:16px;transform:translateY(-50%);color:var(--muted)}
+.search .inp{padding-left:36px;border-radius:999px}
+.count{font-size:.82rem;color:var(--muted);margin-bottom:14px;font-variant-numeric:tabular-nums}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.tcard{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s,border-color .3s;transform-style:preserve-3d;min-width:0}
+.tcard:hover{border-color:var(--line-strong);box-shadow:var(--shadow)}
+.tvis{position:relative;aspect-ratio:16/10;max-width:100%;overflow:hidden;background:var(--sage);color:var(--art-a)}
+.tvis.c-pk{background:linear-gradient(150deg,var(--sage),color-mix(in srgb,var(--euca) 22%,var(--sage)))}
+.tvis.c-th{background:linear-gradient(150deg,color-mix(in srgb,var(--gold) 14%,var(--sage)),var(--sage))}
+.tvis.c-wo{background:linear-gradient(150deg,color-mix(in srgb,var(--copper) 16%,var(--sage)),var(--sage))}
+.tvis.c-ch{background:linear-gradient(150deg,var(--sage),color-mix(in srgb,var(--gold) 20%,var(--sage)))}
+.tvis svg.art{position:absolute;inset:0;width:100%;height:100%;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.tcard:hover .tvis svg.art{transform:scale(1.06) rotate(-1deg)}
+.tvis .deva-big{position:absolute;right:14px;bottom:8px;font-family:var(--f-deva);font-size:2.2rem;color:color-mix(in srgb,var(--forest) 30%,transparent);line-height:1}
+.tvis .ph-lab{position:absolute;left:10px;top:10px;font-size:.66rem;letter-spacing:.06em;background:var(--glass);padding:3px 9px;border-radius:999px;color:var(--muted)}
+.tbody{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.tmeta{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.tbody h3{font-size:1.32rem}
+.tbody .alt{font-size:.88rem;color:var(--gold);margin-top:-4px}
+.tbody .d{font-size:.9rem;color:var(--muted);flex:1}
+.tact{display:flex;justify-content:space-between;align-items:center;gap:8px;padding-top:10px;border-top:1px solid var(--line);margin-top:6px}
+.empty{padding:40px;text-align:center;color:var(--muted);border:1px dashed var(--line-strong);border-radius:var(--r);grid-column:1/-1}
+
+/* panchakarma */
+.pk{position:relative;overflow:hidden;background:var(--forest);color:var(--on-accent)}
+:root .pk{--pk-ink:#F2EEE4;--pk-muted:rgba(242,238,228,.72);--pk-line:rgba(242,238,228,.18);background:#163F33}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .pk{background:#0B1915}}
+:root[data-theme="dark"] .pk{background:#0B1915}
+.pk{color:var(--pk-ink)}
+.pk .eyebrow{color:#D7B56F}
+.pk-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,6vw,80px);align-items:center}
+.orbit{position:relative;width:100%;max-width:520px;aspect-ratio:1;margin-inline:auto;perspective:900px}
+.orbit .ring3d{position:absolute;inset:6%;border-radius:50%;border:1px solid var(--pk-line);transform:rotateX(64deg);animation:ringspin 26s linear infinite}
+.orbit .ring3d.r2{inset:16%;border-color:rgba(215,181,111,.35);animation-duration:34s;animation-direction:reverse;transform:rotateX(64deg) rotateY(18deg)}
+.orbit .ring3d::after{content:"";position:absolute;top:-5px;left:50%;width:10px;height:10px;border-radius:50%;background:#D7B56F;box-shadow:0 0 18px 4px rgba(215,181,111,.55)}
+@keyframes ringspin{to{transform:rotateX(64deg) rotateZ(360deg)}}
+.orbit svg.ring{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.orbit .spin{transform-origin:200px 200px;animation:spin 60s linear infinite}
+.orbit text{fill:var(--pk-ink);font-family:var(--f-display);font-size:15px}
+.orbit text.dv{font-family:var(--f-deva);font-size:13px;fill:#D7B56F}
+.pk-copy{display:flex;flex-direction:column;gap:20px;min-width:0}
+.pk-copy h2{font-size:clamp(2rem,4vw,3.2rem);color:var(--pk-ink)}
+.pk-copy>p{color:var(--pk-muted);max-width:56ch}
+.stages{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;border-top:1px solid var(--pk-line)}
+.stages li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:4px 14px;padding:16px 0;border-bottom:1px solid var(--pk-line)}
+.stages .n{font-family:var(--f-display);font-size:1.6rem;color:#D7B56F;grid-row:span 2;line-height:1}
+.stages h3{font-size:1.2rem;color:var(--pk-ink)}
+.stages p{color:var(--pk-muted);font-size:.93rem}
+.pk .btn-primary{background:#D7B56F;color:#0B1915}
+.pk .btn-ghost{color:var(--pk-ink);border-color:var(--pk-line)}
+.pk .btn-ghost:hover{color:#D7B56F;border-color:#D7B56F}
+.pk .note{color:var(--pk-muted)}
+.pk .note::before{background:#D7B56F}
+@media (max-width:860px){.pk-grid{grid-template-columns:minmax(0,1fr)}.orbit{max-width:380px}}
+
+/* concerns */
+.concerns{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.concern{display:flex;flex-direction:column;gap:10px;padding:22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:background-color .3s}
+.concern:hover{background:var(--surface)}
+.concern .idx{font-family:var(--f-display);color:var(--gold);font-size:.95rem;font-variant-numeric:tabular-nums}
+.concern h3{font-size:1.18rem}
+.concern .alt{font-size:.86rem;color:var(--muted)}
+.concern .link{margin-top:auto;align-self:flex-start}
+
+/* products */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.pcard{display:flex;flex-direction:column;background:var(--bg);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s;transform-style:preserve-3d;min-width:0}
+.pcard:hover{box-shadow:var(--shadow)}
+.pimg{position:relative;aspect-ratio:1/0.8;display:grid;place-items:center;background:radial-gradient(60% 60% at 50% 55%,var(--surface),var(--sage));color:var(--euca)}
+.pimg svg{width:44%;height:auto}
+.pimg .ph-lab{position:absolute;left:10px;top:10px;font-size:.66rem;background:var(--glass);padding:3px 9px;border-radius:999px;color:var(--muted)}
+.pbody{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.pbody h3{font-size:1.15rem}
+.pbody .alt{font-size:.85rem;color:var(--gold);margin-top:-2px}
+.pbody .d{font-size:.86rem;color:var(--muted);flex:1}
+.pmeta{display:grid;grid-template-columns:auto 1fr;gap:2px 10px;font-size:.78rem;padding-top:8px;border-top:1px solid var(--line);margin-top:6px}
+.pmeta dt{color:var(--muted)}
+.pmeta dd{margin:0;text-align:right;font-style:italic;color:var(--muted)}
+.pact{display:flex;gap:8px;margin-top:10px;justify-content:space-between;align-items:center}
+
+/* why */
+.why{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--line-strong)}
+.why article{padding:28px 24px 8px 0;display:flex;flex-direction:column;gap:12px;min-width:0}
+.why article+article{padding-left:24px;border-left:1px solid var(--line)}
+.why .glyph{font-family:var(--f-deva);color:var(--gold);font-size:2rem;line-height:1}
+.why h3{font-size:1.35rem}
+.why p{color:var(--muted);font-size:.94rem}
+@media (max-width:900px){.why{grid-template-columns:1fr 1fr}.why article:nth-child(3){padding-left:0;border-left:0}.why article{padding-bottom:24px}}
+@media (max-width:520px){.why{grid-template-columns:1fr}.why article+article{padding-left:0;border-left:0;border-top:1px solid var(--line)}}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-rows:clamp(140px,16vw,210px);gap:12px}
+.gtile{position:relative;border-radius:var(--r);overflow:hidden;background:var(--sage);border:1px solid var(--line);display:flex;align-items:flex-end;padding:14px;min-width:0}
+.gtile:nth-child(1){grid-column:span 4;grid-row:span 2}
+.gtile:nth-child(2){grid-column:span 2}
+.gtile:nth-child(3){grid-column:span 2}
+.gtile:nth-child(4){grid-column:span 3}
+.gtile:nth-child(5){grid-column:span 3}
+.gtile svg{position:absolute;inset:0;width:100%;height:100%;color:color-mix(in srgb,var(--forest) 22%,transparent)}
+.gtile .gl{position:relative;display:flex;flex-direction:column;gap:2px;background:var(--glass);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:8px 12px;border-radius:var(--r);max-width:100%}
+.gtile .gl b{font-family:var(--f-display);font-weight:400;font-size:1.05rem}
+.gtile .gl span{font-size:.72rem;color:var(--muted)}
+@media (max-width:700px){.gallery{grid-template-columns:1fr 1fr;grid-auto-rows:160px}.gtile:nth-child(n){grid-column:span 1;grid-row:span 1}.gtile:nth-child(1){grid-column:span 2;grid-row:span 1}}
+
+/* booking */
+.book-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,72px);align-items:start}
+.book-aside{display:flex;flex-direction:column;gap:18px}
+.book-aside h2{font-size:clamp(2rem,4vw,3.2rem)}
+.book-aside p{color:var(--muted)}
+.form{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:clamp(18px,3vw,32px);display:grid;grid-template-columns:1fr 1fr;gap:16px;box-shadow:var(--shadow)}
+.form .full{grid-column:1/-1}
+.err{font-size:.78rem;color:var(--danger);min-height:1em}
+.inp[aria-invalid="true"]{border-color:var(--danger)}
+.form .btn{justify-self:start}
+.success{display:flex;flex-direction:column;gap:14px}
+.success .tick{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:color-mix(in srgb,var(--forest) 14%,transparent);color:var(--forest)}
+.success h3{font-size:1.6rem}
+.success p{color:var(--muted)}
+.summary{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:.92rem;padding:14px 0;border-block:1px solid var(--line)}
+.summary dt{color:var(--muted)}
+.summary dd{margin:0;overflow-wrap:anywhere}
+.row-btns{display:flex;flex-wrap:wrap;gap:10px}
+@media (max-width:860px){.book-grid{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:520px){.form{grid-template-columns:1fr}}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(24px,5vw,64px)}
+.clist{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.clist li{display:grid;grid-template-columns:28px minmax(0,140px) minmax(0,1fr);gap:12px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.clist svg{width:18px;height:18px;color:var(--euca);align-self:center}
+.clist .k{color:var(--muted);font-size:.88rem}
+.map{position:relative;min-height:340px;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:var(--sage);display:flex;align-items:flex-end;padding:18px}
+.map svg{position:absolute;inset:0;width:100%;height:100%;color:color-mix(in srgb,var(--forest) 25%,transparent)}
+.map .pin{position:absolute;left:52%;top:44%;width:26px;height:26px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--copper);box-shadow:0 0 0 8px color-mix(in srgb,var(--copper) 18%,transparent)}
+.map .card{position:relative;background:var(--glass);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:10px;max-width:420px}
+.map .card p{font-size:.9rem;color:var(--muted)}
+.btn[aria-disabled="true"]{opacity:.5;cursor:not-allowed}
+@media (max-width:860px){.contact-grid{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:480px){.clist li{grid-template-columns:24px minmax(0,1fr)}.clist li .v{grid-column:2}}
+
+/* footer */
+footer{background:var(--surface);border-top:1px solid var(--line);padding-block:56px 32px}
+.f-grid{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:32px}
+.f-grid h4{font-family:var(--f-body);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px}
+html[lang="mr"] .f-grid h4{letter-spacing:.02em;font-size:.86rem}
+.f-grid ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;font-size:.92rem}
+.f-grid button.fl{background:none;border:0;padding:0;cursor:pointer;color:var(--ink);text-align:left}
+.f-grid button.fl:hover{color:var(--gold)}
+.f-brand p{color:var(--muted);font-size:.92rem;margin-top:14px;max-width:36ch}
+.f-big{font-family:var(--f-display);font-size:clamp(2.6rem,9vw,7.5rem);line-height:.9;color:color-mix(in srgb,var(--forest) 12%,transparent);margin-top:40px;white-space:nowrap;overflow:hidden}
+.f-base{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-top:20px;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted)}
+.f-base button{background:none;border:0;padding:0;color:inherit;text-decoration:underline;cursor:pointer;font-size:inherit}
+@media (max-width:860px){.f-grid{grid-template-columns:1fr 1fr}.f-brand{grid-column:1/-1}}
+
+/* mobile CTA */
+.mcta{display:none}
+@media (max-width:760px){
+  .mcta{position:fixed;left:0;right:0;bottom:0;z-index:90;display:grid;grid-template-columns:1fr 1fr 1.4fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));background:var(--glass);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-top:1px solid var(--line)}
+  .mcta button{min-height:46px;border-radius:999px;border:1px solid var(--line-strong);background:var(--surface);font-weight:600;font-size:.88rem;display:flex;align-items:center;justify-content:center;gap:6px;cursor:pointer}
+  .mcta button svg{width:16px;height:16px}
+  .mcta .pri{background:var(--forest);color:var(--on-accent);border-color:var(--forest)}
+  body{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+}
+
+/* dialog */
+dialog{border:0;padding:0;background:transparent;max-width:min(860px,calc(100% - 24px));width:100%;max-height:calc(100% - 32px);color:var(--ink)}
+dialog::backdrop{background:rgba(7,17,15,.55);backdrop-filter:blur(6px)}
+.dlg{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:auto;max-height:calc(100dvh - 32px);box-shadow:var(--shadow)}
+.dlg-head{position:relative;padding:28px clamp(18px,4vw,40px) 22px;background:linear-gradient(150deg,var(--sage),var(--surface));border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:10px}
+.dlg-head h2{font-size:clamp(1.9rem,4vw,2.8rem);padding-right:44px}
+.dlg-head .alt{color:var(--gold);font-size:1.05rem}
+.dlg-close{position:absolute;right:14px;top:14px}
+.dlg-body{padding:24px clamp(18px,4vw,40px) 32px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:26px 40px}
+.dlg-body section{display:flex;flex-direction:column;gap:8px;scroll-margin:0}
+.dlg-body section.full{grid-column:1/-1}
+.dlg-body h3{font-family:var(--f-body);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600}
+html[lang="mr"] .dlg-body h3{letter-spacing:.02em;font-size:.88rem}
+.dlg-body p,.dlg-body li{font-size:.95rem}
+.dlg-body ol,.dlg-body ul{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:6px}
+.dlg-body ol li::marker{color:var(--gold);font-family:var(--f-display)}
+.dlg-body details{border-bottom:1px solid var(--line);padding:10px 0}
+.dlg-body summary{cursor:pointer;font-weight:600;font-size:.95rem}
+.dlg-body details p{color:var(--muted);margin-top:6px}
+.rel{display:flex;flex-wrap:wrap;gap:8px}
+.dlg-foot{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;padding:18px clamp(18px,4vw,40px);border-top:1px solid var(--line);background:var(--bg)}
+.dlg-foot .note{margin:0}
+@media (max-width:640px){.dlg-body{grid-template-columns:minmax(0,1fr)}}
+
+.toast{position:fixed;left:50%;bottom:calc(96px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:999px;font-size:.88rem;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;z-index:400;max-width:calc(100% - 32px);text-align:center}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media (min-width:761px){.toast{bottom:28px}}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}
+  .loader{display:none}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="leaf" viewBox="0 0 40 80"><path d="M20 78 C2 56 2 22 20 2 C38 22 38 56 20 78Z" fill="currentColor" opacity=".9"/><path d="M20 76 V6 M20 26 L11 18 M20 38 L29 29 M20 50 L10 42 M20 61 L28 53" stroke="var(--surface)" stroke-width="1.3" fill="none" opacity=".55"/></symbol>
+    <symbol id="mark" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M20 31 C11 25 11 14 20 7 C29 14 29 25 20 31Z" fill="currentColor"/><path d="M20 30 V12" stroke="var(--surface)" stroke-width="1.2"/><path d="M9 29 C14 33 26 33 31 29" fill="none" stroke="var(--gold)" stroke-width="1.6"/></symbol>
+  </defs>
+</svg>
+
+<div class="loader" id="loader" aria-hidden="true"><div class="loader-mark"><span>चै</span></div></div>
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+<header class="nav">
+  <nav class="nav-in" aria-label="Primary">
+    <button class="brand" data-go="top" aria-label="Chaitanyaved">
+      <svg class="brand-mark" aria-hidden="true"><use href="#mark"/></svg>
+      <span class="brand-text"><span class="brand-name" data-i18n="brand_name">Chaitanyaved</span><span class="brand-sub" data-i18n="brand_sub">Ayurved Chikitsalay &amp; Panchkarma Kendra</span></span>
+    </button>
+    <ul class="nav-links">
+      <li><button data-go="treatments" data-i18n="nav_treat">Treatments</button></li>
+      <li><button data-go="panchakarma" data-i18n="nav_pk">Panchakarma</button></li>
+      <li><button data-go="treatments" data-filter-go="wo" data-i18n="nav_women">Women's Wellness</button></li>
+      <li><button data-go="treatments" data-filter-go="ch" data-i18n="nav_child">Children's Wellness</button></li>
+      <li><button data-go="products" data-i18n="nav_products">Products</button></li>
+      <li><button data-go="doctors" data-i18n="nav_doctors">Doctors</button></li>
+      <li><button data-go="about" data-i18n="nav_about">About</button></li>
+      <li><button data-go="gallery" data-i18n="nav_gallery">Gallery</button></li>
+      <li><button data-go="contact" data-i18n="nav_contact">Contact</button></li>
+    </ul>
+    <div class="nav-tools">
+      <div class="seg" role="group" data-i18n-aria="lang_label" aria-label="Language">
+        <button data-lang="en" aria-pressed="true">EN</button><button data-lang="mr" class="deva" aria-pressed="false">मराठी</button>
+      </div>
+      <button class="icon-btn" id="themeBtn" data-i18n-aria="theme_toggle" aria-label="Switch light or dark theme">
+        <svg class="theme-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+          <mask id="mc"><rect width="24" height="24" fill="#fff"/><circle class="moon-cut" cx="17" cy="7" r="6" fill="#000"/></mask>
+          <circle cx="12" cy="12" r="5" fill="currentColor" stroke="none" mask="url(#mc)"/>
+          <g class="sun-rays"><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g>
+        </svg>
+      </button>
+      <button class="btn btn-primary btn-sm nav-cta" data-book="general" data-i18n="book">Book Appointment</button>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-expanded="false" aria-controls="drawer" data-i18n-aria="menu" aria-label="Menu">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h11"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="drawer" id="drawer" hidden>
+  <div class="drawer-in">
+    <button class="dl" data-go="treatments"><span data-i18n="nav_treat">Treatments</span><span aria-hidden="true">→</span></button>
+    <button class="dl" data-go="panchakarma"><span data-i18n="nav_pk">Panchakarma</span><span aria-hidden="true">→</span></button>
+    <button class="dl" data-go="treatments" data-filter-go="wo"><span data-i18n="nav_women">Women's Wellness</span><span aria-hidden="true">→</span></button>
+    <button class="dl" data-go="treatments" data-filter-go="ch"><span data-i18n="nav_child">Children's Wellness</span><span aria-hidden="true">→</span></button>
+    <button class="dl" data-go="products"><span data-i18n="nav_products">Products</span><span aria-hidden="true">→</span></button>
+    <button class="dl" data-go="doctors"><span data-i18n="nav_doctors">Doctors</span><span aria-hidden="true">→</span></button>
+    <button class="dl" data-go="about"><span data-i18n="nav_about">About</span><span aria-hidden="true">→</span></button>
+    <button class="dl" data-go="gallery"><span data-i18n="nav_gallery">Gallery</span><span aria-hidden="true">→</span></button>
+    <button class="dl" data-go="contact"><span data-i18n="nav_contact">Contact</span><span aria-hidden="true">→</span></button>
+    <button class="btn btn-primary" data-book="general" data-i18n="book">Book Appointment</button>
+  </div>
+</div>
+
+<main id="main">
+  <!-- HERO -->
+  <section class="hero" id="top" aria-labelledby="heroH">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="hero-shloka">॥ स्वस्थस्य स्वास्थ्य रक्षणम् ॥</p>
+        <p class="eyebrow" data-i18n="hero_eyebrow">Ayurveda · Panchakarma · Consultation</p>
+        <h1 id="heroH" data-i18n-html="hero_h1">Classical Ayurveda, <em>guided by your physician.</em></h1>
+        <p class="hero-sub" data-i18n="hero_sub">Personal consultation, Panchakarma and traditional therapies at Chaitanyaved. Every plan begins with an assessment by our physicians.</p>
+        <div class="hero-ctas">
+          <button class="btn btn-primary" data-book="general" data-i18n="hero_cta1">Book a consultation</button>
+          <button class="btn btn-ghost" data-go="treatments" data-i18n="hero_cta2">Explore treatments</button>
+        </div>
+        <ul class="hero-pts">
+          <li data-i18n="hero_pts1">Consultation first</li>
+          <li data-i18n="hero_pts2">Doctor-guided care</li>
+          <li data-i18n="hero_pts3">Panchakarma kendra</li>
+        </ul>
+      </div>
+      <div class="scene-col">
+        <div class="scene-wrap" id="sceneWrap"><canvas id="scene" aria-hidden="true"></canvas><span class="scene-cap" data-i18n="scene_cap">Tamra · Patra · Vanaspati</span></div>
+        <form class="panel" id="heroPanel" novalidate>
+          <h2 data-i18n="panel_title">Request an appointment</h2>
+          <div class="row">
+            <div class="fld"><label for="hDoctor" data-i18n="panel_doc">Preferred doctor</label><select class="inp" id="hDoctor"></select></div>
+            <div class="fld"><label for="hDate" data-i18n="panel_date">Preferred date</label><input class="inp" type="date" id="hDate"></div>
+          </div>
+          <button class="btn btn-primary" type="submit"><span data-i18n="panel_go">Continue</span><span aria-hidden="true">→</span></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="band" id="about" aria-labelledby="aboutH">
+    <div class="wrap">
+      <div class="head"><div class="head-l"><p class="eyebrow" data-i18n="about_eyebrow">About Chaitanyaved</p><h2 id="aboutH" data-i18n="about_h">Care that begins with understanding the person.</h2></div></div>
+      <div class="about-grid">
+        <div class="about-body reveal">
+          <p data-i18n="about_p1"></p>
+          <p data-i18n="about_p2"></p>
+          <p class="note" data-i18n="about_note"></p>
+        </div>
+        <div class="pillars reveal">
+          <div class="pillar"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M6 26h20M9 26V12M23 26V12M16 26V12M5 12h22L16 5z"/></svg><h3 data-i18n="p1h"></h3><p data-i18n="p1"></p></div>
+          <div class="pillar"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="16" cy="11" r="5"/><path d="M6 27c1.5-6 5.5-9 10-9s8.5 3 10 9"/></svg><h3 data-i18n="p2h"></h3><p data-i18n="p2"></p></div>
+          <div class="pillar"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M10 5v8a6 6 0 0 0 12 0V5M16 19v3a5 5 0 0 0 10 0v-2"/><circle cx="26" cy="18" r="2"/></svg><h3 data-i18n="p3h"></h3><p data-i18n="p3"></p></div>
+          <div class="pillar"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M8 13h16l-2 10a4 4 0 0 1-4 3h-4a4 4 0 0 1-4-3zM12 13c0-3 2-5 4-6M16 13c0-3 3-6 6-6"/></svg><h3 data-i18n="p4h"></h3><p data-i18n="p4"></p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOCTORS -->
+  <section class="band band-alt" id="doctors" aria-labelledby="docH">
+    <div class="wrap">
+      <div class="head"><div class="head-l"><p class="eyebrow" data-i18n="doc_eyebrow">Our physicians</p><h2 id="docH" data-i18n="doc_h">Meet the physicians</h2></div><p class="lede" data-i18n="doc_sub"></p></div>
+      <div class="docs" id="docs"></div>
+    </div>
+  </section>
+
+  <!-- TREATMENTS CATALOGUE -->
+  <section class="band" id="treatments" aria-labelledby="trH">
+    <div class="wrap">
+      <div class="head"><div class="head-l"><p class="eyebrow" data-i18n="cat_eyebrow">Treatments &amp; therapies</p><h2 id="trH" data-i18n="cat_h">The complete treatment catalogue</h2></div><p class="lede" data-i18n="cat_sub"></p></div>
+      <div class="banner" role="note"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10" cy="10" r="8"/><path d="M10 6v5M10 14v.01"/></svg><span data-i18n="pending_banner"></span></div>
+      <div class="toolbar">
+        <div class="chips" id="tChips" role="group" data-i18n-aria="filter_label" aria-label="Filter"></div>
+        <label class="search"><span class="sr" data-i18n="search_label">Search</span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="9" cy="9" r="6"/><path d="M14 14l4 4"/></svg><input class="inp" type="search" id="tSearch" data-i18n-ph="search_ph" placeholder="Search treatments"></label>
+      </div>
+      <p class="count" id="tCount" aria-live="polite"></p>
+      <div class="tgrid" id="tGrid"></div>
+    </div>
+  </section>
+
+  <!-- PANCHAKARMA -->
+  <section class="band pk" id="panchakarma" aria-labelledby="pkH">
+    <div class="wrap pk-grid">
+      <div class="orbit" aria-hidden="true">
+        <div class="ring3d"></div><div class="ring3d r2"></div>
+        <svg class="ring" viewBox="0 0 400 400" id="orbitSvg"></svg>
+      </div>
+      <div class="pk-copy">
+        <p class="eyebrow" data-i18n="pk_eyebrow">Panchakarma Kendra</p>
+        <h2 id="pkH" data-i18n="pk_h"></h2>
+        <p data-i18n="pk_p"></p>
+        <ol class="stages">
+          <li><span class="n">I</span><h3 data-i18n="stage1h"></h3><p data-i18n="stage1"></p></li>
+          <li><span class="n">II</span><h3 data-i18n="stage2h"></h3><p data-i18n="stage2"></p></li>
+          <li><span class="n">III</span><h3 data-i18n="stage3h"></h3><p data-i18n="stage3"></p></li>
+        </ol>
+        <div class="hero-ctas"><button class="btn btn-primary" data-book="panchakarma" data-i18n="pk_cta">Ask about Panchakarma</button><button class="btn btn-ghost" data-go="treatments" data-filter-go="pk" data-i18n="pk_view">View all procedures</button></div>
+        <p class="note" data-i18n="pk_note"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONCERNS -->
+  <section class="band" id="concerns" aria-labelledby="coH">
+    <div class="wrap">
+      <div class="head"><div class="head-l"><p class="eyebrow" data-i18n="co_eyebrow">Health concerns</p><h2 id="coH" data-i18n="co_h">Areas we consult on</h2></div><p class="lede" data-i18n="co_sub"></p></div>
+      <div class="concerns" id="concernGrid"></div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="band band-alt" id="products" aria-labelledby="prH">
+    <div class="wrap">
+      <div class="head"><div class="head-l"><p class="eyebrow" data-i18n="pr_eyebrow">Ayurvedic products</p><h2 id="prH" data-i18n="pr_h">Products and medicines</h2></div><p class="lede" data-i18n="pr_sub"></p></div>
+      <div class="banner" role="note"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10" cy="10" r="8"/><path d="M10 6v5M10 14v.01"/></svg><span data-i18n="product_note"></span></div>
+      <div class="toolbar">
+        <div class="chips" id="pChips" role="group" data-i18n-aria="filter_label" aria-label="Filter"></div>
+        <label class="search"><span class="sr" data-i18n="search_label">Search</span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="9" cy="9" r="6"/><path d="M14 14l4 4"/></svg><input class="inp" type="search" id="pSearch" data-i18n-ph="psearch_ph" placeholder="Search products"></label>
+      </div>
+      <p class="count" id="pCount" aria-live="polite"></p>
+      <div class="pgrid" id="pGrid"></div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="band" id="why" aria-labelledby="whyH">
+    <div class="wrap">
+      <div class="head"><div class="head-l"><p class="eyebrow" data-i18n="why_eyebrow">Why Chaitanyaved</p><h2 id="whyH" data-i18n="why_h">What you can expect</h2></div></div>
+      <div class="why reveal">
+        <article><span class="glyph">श्रवण</span><h3 data-i18n="w1h"></h3><p data-i18n="w1"></p></article>
+        <article><span class="glyph">प्रकृति</span><h3 data-i18n="w2h"></h3><p data-i18n="w2"></p></article>
+        <article><span class="glyph">वैद्य</span><h3 data-i18n="w3h"></h3><p data-i18n="w3"></p></article>
+        <article><span class="glyph">सत्य</span><h3 data-i18n="w4h"></h3><p data-i18n="w4"></p></article>
+      </div>
+      <p class="note" data-i18n="why_note"></p>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="band band-alt" id="gallery" aria-labelledby="gaH">
+    <div class="wrap">
+      <div class="head"><div class="head-l"><p class="eyebrow" data-i18n="ga_eyebrow">The clinic</p><h2 id="gaH" data-i18n="ga_h">Inside Chaitanyaved</h2></div><p class="lede" data-i18n="ga_sub"></p></div>
+      <div class="gallery" id="gallery-grid"></div>
+    </div>
+  </section>
+
+  <!-- BOOK -->
+  <section class="band" id="book" aria-labelledby="bkH">
+    <div class="wrap book-grid">
+      <div class="book-aside">
+        <p class="eyebrow" data-i18n="bk_eyebrow">Appointments</p>
+        <h2 id="bkH" data-i18n="bk_h">Request an appointment</h2>
+        <p data-i18n="bk_sub"></p>
+      </div>
+      <div id="formWrap">
+        <form class="form" id="bookForm" novalidate>
+          <div class="fld"><label for="fName" data-i18n="f_name">Full name</label><input class="inp" id="fName" name="name" autocomplete="name" aria-describedby="eName"><span class="err" id="eName"></span></div>
+          <div class="fld"><label for="fPhone" data-i18n="f_phone">Phone number</label><input class="inp" id="fPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="98xxxxxxxx" aria-describedby="ePhone"><span class="err" id="ePhone"></span></div>
+          <div class="fld"><label for="fDoctor" data-i18n="panel_doc">Preferred doctor</label><select class="inp" id="fDoctor" name="doctor" aria-describedby="eDoctor"></select><span class="err" id="eDoctor"></span></div>
+          <div class="fld"><label for="fDate" data-i18n="panel_date">Preferred date</label><input class="inp" id="fDate" name="date" type="date" aria-describedby="eDate"><span class="err" id="eDate"></span></div>
+          <div class="fld full"><label for="fType" data-i18n="f_type">Consultation or treatment</label><select class="inp" id="fType" name="type" aria-describedby="eType"></select><span class="err" id="eType"></span></div>
+          <div class="fld full"><label for="fMsg" data-i18n="f_msg">Additional message (optional)</label><textarea class="inp" id="fMsg" name="message" maxlength="600"></textarea></div>
+          <button class="btn btn-primary full" type="submit" data-i18n="f_submit">Send request</button>
+        </form>
+        <div class="form success" id="success" hidden tabindex="-1"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="band band-alt" id="contact" aria-labelledby="ctH">
+    <div class="wrap">
+      <div class="head"><div class="head-l"><p class="eyebrow" data-i18n="ct_eyebrow">Visit</p><h2 id="ctH" data-i18n="ct_h">Contact and location</h2></div></div>
+      <div class="contact-grid">
+        <div>
+          <ul class="clist" id="clist"></ul>
+          <div class="hero-ctas" style="margin-top:22px"><button class="btn btn-primary" data-book="general" data-i18n="contact_cta">Request a call back</button><button class="btn btn-ghost" data-wa="general" data-i18n="whatsapp">WhatsApp</button></div>
+        </div>
+        <div class="map">
+          <svg viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+            <path d="M-20 300 C120 260 160 330 300 290 S520 210 640 250"/><path d="M-20 260 C110 220 170 290 300 250 S520 170 640 210"/><path d="M-20 220 C100 180 180 250 300 210 S520 130 640 170"/><path d="M-20 180 C100 140 190 210 300 170 S520 90 640 130"/><path d="M-20 140 C90 100 200 170 300 130 S520 50 640 90"/>
+            <path d="M80 -10 L210 410 M-10 120 L610 40 M330 -10 L380 410" stroke-width="5" opacity=".5"/>
+          </svg>
+          <span class="pin" aria-hidden="true"></span>
+          <div class="card"><b data-i18n="map_h">Location</b><p data-i18n="map_note"></p><button class="btn btn-ghost btn-sm" id="mapsBtn" aria-disabled="true" data-i18n="open_maps">Open in Google Maps</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-brand">
+        <div class="brand" style="cursor:default"><svg class="brand-mark" aria-hidden="true"><use href="#mark"/></svg><span class="brand-text"><span class="brand-name" data-i18n="brand_name">Chaitanyaved</span><span class="brand-sub" style="display:block" data-i18n="brand_sub"></span></span></div>
+        <p data-i18n="f_tag"></p>
+      </div>
+      <div><h4 data-i18n="f_nav">Explore</h4><ul>
+        <li><button class="fl" data-go="treatments" data-i18n="nav_treat"></button></li>
+        <li><button class="fl" data-go="panchakarma" data-i18n="nav_pk"></button></li>
+        <li><button class="fl" data-go="products" data-i18n="nav_products"></button></li>
+        <li><button class="fl" data-go="doctors" data-i18n="nav_doctors"></button></li>
+        <li><button class="fl" data-go="gallery" data-i18n="nav_gallery"></button></li>
+      </ul></div>
+      <div><h4 data-i18n="f_contact">Contact</h4><ul id="fContact"></ul></div>
+      <div><h4 data-i18n="f_social">Social</h4><ul><li class="ph-text" data-i18n="f_social_p"></li></ul></div>
+    </div>
+    <div class="f-big" aria-hidden="true">चैतन्यवेद</div>
+    <div class="f-base"><span data-i18n="copyright"></span><span><button id="privBtn" data-i18n="privacy">Privacy policy</button> · <span data-i18n="disclaimer"></span></span></div>
+  </div>
+</footer>
+
+<div class="mcta" role="group" aria-label="Quick actions">
+  <button data-call><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 3h3l1.5 4-2 1.2a10 10 0 0 0 5.3 5.3L13 11.5l4 1.5v3a1.5 1.5 0 0 1-1.6 1.5C8.6 17 3 11.4 2.5 4.6A1.5 1.5 0 0 1 4 3z"/></svg><span data-i18n="call">Call</span></button>
+  <button data-wa="general"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 17l1.2-3.6A7 7 0 1 1 7 16z"/></svg><span data-i18n="wa_short">WhatsApp</span></button>
+  <button class="pri" data-book="general"><span data-i18n="mbook">Book</span></button>
+</div>
+
+<dialog id="detail" aria-labelledby="dTitle"><div class="dlg" id="detailIn"></div></dialog>
+<dialog id="priv" aria-labelledby="privH"><div class="dlg"><div class="dlg-head"><h2 id="privH" data-i18n="privacy">Privacy policy</h2><button class="icon-btn dlg-close" data-close data-i18n-aria="close" aria-label="Close">✕</button></div><div class="dlg-body"><section class="full"><p data-i18n="priv_p"></p></section></div></div></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+"use strict";
+/* ---------- Clinic configuration: fill in verified details here ---------- */
+const CONFIG = {
+  phone: null,          // e.g. "+91 9xxxxxxxxx"
+  whatsapp: null,       // digits with country code, e.g. "919xxxxxxxxx"
+  address: null,        // ["English address", "मराठी पत्ता"]
+  hours: null,          // ["Mon–Sat, 10:00–13:00, 17:00–20:00", "..."]
+  mapsUrl: null,        // Google Maps share link
+  bookingEndpoint: null // POST endpoint for appointment requests
+};
+
+/* ---------- storage ---------- */
+const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+const root=document.documentElement;
+let lang = store.get('cv-lang')==='mr' ? 'mr' : 'en';
+const M = ()=> lang==='mr' ? 1 : 0;
+const L = (pair)=> Array.isArray(pair) ? pair[M()] : pair;
+const devDigits = (s)=> lang==='mr' ? String(s).replace(/\d/g,d=>'०१२३४५६७८९'[d]) : String(s);
+const esc = (s)=> String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+/* ---------- UI strings ---------- */
+const I = {
+skip:["Skip to content","मुख्य मजकुराकडे जा"],
+brand_name:["Chaitanyaved","चैतन्यवेद"],
+brand_sub:["Ayurved Chikitsalay & Panchkarma Kendra","आयुर्वेद चिकित्सालय व पंचकर्म केंद्र"],
+nav_about:["About","आमच्याविषयी"],nav_doctors:["Doctors","वैद्य"],nav_treat:["Treatments","उपचार"],nav_pk:["Panchakarma","पंचकर्म"],
+nav_women:["Women's Wellness","स्त्री आरोग्य"],nav_child:["Children's Wellness","बालआरोग्य"],nav_products:["Products","उत्पादने"],
+nav_gallery:["Gallery","छायाचित्रे"],nav_contact:["Contact","संपर्क"],
+book:["Book Appointment","अपॉइंटमेंट घ्या"],menu:["Menu","मेनू"],lang_label:["Language","भाषा"],
+theme_toggle:["Switch light or dark theme","लाइट किंवा डार्क थीम बदला"],
+hero_eyebrow:["Ayurveda · Panchakarma · Consultation","आयुर्वेद · पंचकर्म · वैद्यकीय सल्ला"],
+hero_h1:["Classical Ayurveda, <em>guided by your physician.</em>","वैद्यांच्या मार्गदर्शनाखाली <em>शास्त्रशुद्ध आयुर्वेद.</em>"],
+hero_sub:["Personal consultation, Panchakarma and traditional therapies at Chaitanyaved. Every plan begins with an assessment by our physicians.","चैतन्यवेद येथे वैयक्तिक सल्ला, पंचकर्म आणि पारंपरिक उपचार. प्रत्येक उपचार योजना आमच्या वैद्यांच्या तपासणीनंतरच ठरवली जाते."],
+hero_cta1:["Book a consultation","सल्ल्यासाठी वेळ घ्या"],hero_cta2:["Explore treatments","उपचार पाहा"],
+hero_pts1:["Consultation first","आधी सल्ला"],hero_pts2:["Doctor-guided care","वैद्यांचे मार्गदर्शन"],hero_pts3:["Panchakarma kendra","पंचकर्म केंद्र"],
+scene_cap:["Tamra · Patra · Vanaspati","ताम्र · पात्र · वनस्पती"],
+panel_title:["Request an appointment","अपॉइंटमेंटची विनंती"],panel_doc:["Preferred doctor","पसंतीचे वैद्य"],panel_date:["Preferred date","पसंतीची तारीख"],panel_go:["Continue","पुढे"],
+doc1_opt:["Doctor 1 (name pending)","वैद्य १ (नाव प्रलंबित)"],doc2_opt:["Doctor 2 (name pending)","वैद्य २ (नाव प्रलंबित)"],doc_any:["No preference","कोणतेही चालतील"],select_ph:["Select","निवडा"],
+about_eyebrow:["About Chaitanyaved","चैतन्यवेदविषयी"],
+about_h:["Care that begins with understanding the person.","उपचारांची सुरुवात व्यक्तीला समजून घेण्यापासून."],
+about_p1:["Chaitanyaved Ayurved Chikitsalay & Panchkarma Kendra practises Ayurveda as the classical texts teach it: by examining the individual, their prakriti and their daily life before deciding on any treatment.","चैतन्यवेद आयुर्वेद चिकित्सालय व पंचकर्म केंद्रात आयुर्वेदाचे आचरण शास्त्रात सांगितल्याप्रमाणे केले जाते: कोणताही उपचार ठरवण्यापूर्वी व्यक्ती, तिची प्रकृती आणि दिनचर्या यांचे परीक्षण केले जाते."],
+about_p2:["Our physicians aim to combine classical methods with the clarity and hygiene expected of modern healthcare, explaining each step so that patients can decide with confidence.","शास्त्रोक्त पद्धतींना आधुनिक आरोग्यसेवेतील स्पष्टता व स्वच्छतेची जोड देण्याचा आमच्या वैद्यांचा प्रयत्न असतो. प्रत्येक टप्पा समजावून सांगितला जातो, जेणेकरून रुग्ण विश्वासाने निर्णय घेऊ शकतील."],
+about_note:["Clinic history, founding year and registration details will appear here once provided.","चिकित्सालयाचा इतिहास, स्थापना वर्ष व नोंदणी तपशील उपलब्ध झाल्यावर येथे दिले जातील."],
+p1h:["Traditional approach","पारंपरिक दृष्टिकोन"],p1:["Treatment rooted in the classical Samhitas.","संहितांवर आधारित शास्त्रोक्त उपचार पद्धती."],
+p2h:["Personalised consultation","वैयक्तिक सल्ला"],p2:["Each plan follows an individual assessment of prakriti and condition.","प्रत्येक योजना प्रकृती व तक्रारीच्या वैयक्तिक परीक्षणानंतर ठरते."],
+p3h:["Doctor-guided treatment","वैद्यांच्या देखरेखीखाली उपचार"],p3:["Therapies are prescribed and supervised by qualified physicians.","पात्र वैद्य उपचार सुचवतात व त्यावर देखरेख ठेवतात."],
+p4h:["Panchakarma care","पंचकर्म सुविधा"],p4:["A dedicated kendra for Panchakarma and supporting therapies.","पंचकर्म व पूरक उपचारांसाठी स्वतंत्र केंद्र."],
+doc_eyebrow:["Our physicians","आमचे वैद्य"],doc_h:["Meet the physicians","आमच्या वैद्यांची ओळख"],
+doc_sub:["Profiles will be published once the clinic shares verified details. Nothing on these cards is invented.","चिकित्सालयाकडून पडताळलेली माहिती मिळाल्यानंतर प्रोफाइल प्रकाशित केल्या जातील. या कार्डांवरील कोणतीही माहिती काल्पनिक नाही."],
+doc_name:["Doctor name (to be provided)","वैद्यांचे नाव (प्रलंबित)"],doc_role:["Physician","वैद्य"],
+d_qual:["Qualifications","शैक्षणिक पात्रता"],d_exp:["Experience","अनुभव"],d_spec:["Specialisation","विशेष क्षेत्र"],d_bio:["About","परिचय"],
+tbp:["To be provided","माहिती प्रलंबित"],photo_pending:["Photograph pending","छायाचित्र प्रलंबित"],book_with:["Book with this doctor","या वैद्यांकडे वेळ घ्या"],
+cat_eyebrow:["Treatments & therapies","उपचार व थेरपी"],cat_h:["The complete treatment catalogue","उपचारांची संपूर्ण सूची"],
+cat_sub:["Browse Panchakarma procedures, supporting therapies and wellness services for women and children. Open any item for details.","पंचकर्म प्रक्रिया, पूरक उपचार आणि स्त्रिया व मुलांसाठीच्या सेवा पाहा. सविस्तर माहितीसाठी कोणतीही सेवा उघडा."],
+pending_banner:["Proposed catalogue. Items marked Pending are not yet confirmed by Chaitanyaved, and all medical content awaits review by the clinic's physicians.","प्रस्तावित सूची. 'मंजुरी प्रलंबित' अशी खूण असलेल्या सेवा चैतन्यवेदकडून अद्याप निश्चित झालेल्या नाहीत आणि सर्व वैद्यकीय मजकूर चिकित्सालयाच्या वैद्यांच्या पडताळणीनंतरच अंतिम होईल."],
+search_label:["Search","शोधा"],filter_label:["Filter","फिल्टर"],
+search_ph:["Search treatments, e.g. Shirodhara","उपचार शोधा, उदा. शिरोधारा"],
+f_all:["All","सर्व"],cat_pk:["Panchakarma","पंचकर्म"],cat_th:["Therapies","थेरपी"],cat_wo:["Women's wellness","स्त्री आरोग्य"],cat_ch:["Children's wellness","बालआरोग्य"],
+pending:["Pending approval","मंजुरी प्रलंबित"],learn:["Learn more","अधिक माहिती"],enquire:["Enquire","चौकशी करा"],
+photo_short:["Photo pending","छायाचित्र प्रलंबित"],
+count_t:["{n} treatments and services","{n} उपचार व सेवा"],count_p:["{n} products","{n} उत्पादने"],
+empty:["No matches. Try another name or clear the filter.","काहीही सापडले नाही. दुसरे नाव वापरा किंवा फिल्टर काढा."],
+d_intro:["Introduction","परिचय"],d_inv:["What the treatment involves","उपचारात काय होते"],d_ctx:["Traditional Ayurvedic context","पारंपरिक आयुर्वेदिक संदर्भ"],
+d_proc:["General process","सर्वसाधारण प्रक्रिया"],d_who:["Who may consider a consultation","सल्ला कोणी घ्यावा"],d_prec:["Precautions and suitability","काळजी व योग्यता"],
+d_faq:["Frequently asked questions","नेहमीचे प्रश्न"],d_rel:["Related treatments","संबंधित उपचार"],
+d_review:["Draft content. To be reviewed and approved by Chaitanyaved's physicians before publication.","प्राथमिक मजकूर. प्रकाशनापूर्वी चैतन्यवेदच्या वैद्यांकडून पडताळणी व मंजुरी आवश्यक."],
+proc1:["Consultation and prakriti assessment","सल्ला व प्रकृती परीक्षण"],proc2:["Suitability check, including current medicines and reports","योग्यता तपासणी, सध्याची औषधे व रिपोर्ट्ससह"],
+proc3:["Preparation, where the therapy requires it","आवश्यक असल्यास पूर्वतयारी"],proc4:["The procedure itself, under supervision","देखरेखीखाली प्रत्यक्ष प्रक्रिया"],
+proc5:["Follow-up with diet and routine advice","आहार व दिनचर्या सल्ल्यासह पाठपुरावा"],
+who_p:["Anyone interested may book a consultation. Whether this therapy is right for you is decided only after the physician's assessment.","इच्छुक कोणीही सल्ल्यासाठी वेळ घेऊ शकतात. हा उपचार आपल्यासाठी योग्य आहे की नाही, हे वैद्यांच्या तपासणीनंतरच ठरते."],
+prec1:["Tell the physician about all current medicines, allergies and existing conditions.","सध्याची सर्व औषधे, ॲलर्जी व असलेले आजार याबद्दल वैद्यांना कल्पना द्या."],
+prec2:["Pregnancy, recent illness or surgery can affect suitability.","गर्भावस्था, अलीकडचा आजार किंवा शस्त्रक्रिया यामुळे योग्यतेवर परिणाम होऊ शकतो."],
+prec3:["Ayurvedic therapies do not replace emergency or specialist medical care.","आयुर्वेदिक उपचार तातडीच्या किंवा तज्ज्ञ वैद्यकीय उपचारांची जागा घेत नाहीत."],
+prec4:["Results vary between individuals; no outcome is guaranteed.","परिणाम व्यक्तीनुसार बदलतात; कोणत्याही परिणामाची हमी दिली जात नाही."],
+faq1q:["How long does a session take?","एक सत्र किती वेळ चालते?"],faq1a:["It varies by therapy and person. The physician will tell you the duration and number of sittings at consultation.","उपचार व व्यक्तीनुसार बदलते. सत्राचा कालावधी व बैठकांची संख्या वैद्य सल्ल्यावेळी सांगतील."],
+faq2q:["Do I need a consultation first?","आधी सल्ला घेणे आवश्यक आहे का?"],faq2a:["Yes. Every therapy begins with a consultation with the physician.","होय. प्रत्येक उपचाराची सुरुवात वैद्यांच्या सल्ल्याने होते."],
+faq3q:["Is this service available now?","ही सेवा सध्या उपलब्ध आहे का?"],faq3a:["Availability is awaiting the clinic's confirmation. Please send an enquiry and the clinic will reply.","उपलब्धता चिकित्सालयाकडून निश्चित होणे बाकी आहे. कृपया चौकशी पाठवा."],
+d_book:["Book appointment","अपॉइंटमेंट घ्या"],d_wa:["Enquire on WhatsApp","व्हॉट्सॲपवर चौकशी"],close:["Close","बंद करा"],
+pk_eyebrow:["Panchakarma Kendra","पंचकर्म केंद्र"],
+pk_h:["Five cleansing procedures, one carefully planned course.","पाच शोधन प्रक्रिया, एक काळजीपूर्वक आखलेला उपचारक्रम."],
+pk_p:["Panchakarma is planned around your constitution, condition and the season. Not every procedure is right for every person, and your physician decides what is suitable.","पंचकर्माची योजना आपली प्रकृती, तक्रार आणि ऋतू यांचा विचार करून केली जाते. प्रत्येक प्रक्रिया प्रत्येकासाठी योग्य नसते; काय योग्य आहे ते वैद्य ठरवतात."],
+stage1h:["Purvakarma","पूर्वकर्म"],stage1:["Preparation with snehana (oleation) and swedana (sudation).","स्नेहन व स्वेदनाने शरीराची पूर्वतयारी."],
+stage2h:["Pradhanakarma","प्रधानकर्म"],stage2:["The main procedure: vamana, virechana, basti, nasya or raktamokshana.","मुख्य प्रक्रिया: वमन, विरेचन, बस्ती, नस्य किंवा रक्तमोक्षण."],
+stage3h:["Paschatkarma","पश्चात्कर्म"],stage3:["Recovery through a graded diet and routine (samsarjana krama).","क्रमाक्रमाने आहार व दिनचर्येद्वारे पुनर्प्राप्ती (संसर्जन क्रम)."],
+pk_cta:["Ask about Panchakarma","पंचकर्माविषयी विचारा"],pk_view:["View all procedures","सर्व प्रक्रिया पाहा"],
+pk_note:["Procedure information on this page summarises the classical texts and awaits review by the clinic's physicians.","या पानावरील प्रक्रियेची माहिती शास्त्रग्रंथांचा सारांश असून चिकित्सालयाच्या वैद्यांकडून पडताळणी बाकी आहे."],
+co_eyebrow:["Health concerns","आरोग्य तक्रारी"],co_h:["Areas we consult on","सल्ल्याची क्षेत्रे"],
+co_sub:["These are areas for consultation, not promises of cure. Your physician will advise what is suitable after examining you.","ही सल्ल्याची क्षेत्रे आहेत, बरे होण्याची हमी नाही. तपासणीनंतर आपल्यासाठी योग्य काय आहे ते वैद्य सांगतील."],
+ask:["Ask about this","याविषयी विचारा"],
+pr_eyebrow:["Ayurvedic products","आयुर्वेदिक उत्पादने"],pr_h:["Products and medicines","उत्पादने व औषधे"],
+pr_sub:["Formulations and wellness products listed for enquiry. Medicines are dispensed only on a physician's advice.","चौकशीसाठी सूचीबद्ध औषधे व उत्पादने. औषधे फक्त वैद्यांच्या सल्ल्यानेच दिली जातात."],
+product_note:["Ingredients, dosage, pack sizes and prices will be added only after the clinic supplies verified details. Availability is pending confirmation.","घटक, मात्रा, पॅक आकार व किंमत चिकित्सालयाकडून पडताळलेली माहिती मिळाल्यानंतरच दिल्या जातील. उपलब्धता निश्चित होणे बाकी आहे."],
+psearch_ph:["Search products, e.g. Chyawanprash","उत्पादन शोधा, उदा. च्यवनप्राश"],
+pc_ras:["Rasayana & nutrition","रसायन व पोषण"],pc_care:["Skin & hair","त्वचा व केस"],pc_kids:["Children","लहान मुले"],pc_pure:["Pure staples","शुद्ध उत्पादने"],pc_classic:["Classical formulations","शास्त्रोक्त औषधी कल्प"],
+pack:["Pack size","पॅक आकार"],price:["Price","किंमत"],not_supplied:["Not yet supplied","अद्याप उपलब्ध नाही"],image_pending:["Image pending","प्रतिमा प्रलंबित"],
+p_generic:["Details to be supplied by the clinic.","तपशील चिकित्सालयाकडून दिला जाईल."],
+p_use:["Use only as advised by the physician.","फक्त वैद्यांच्या सल्ल्यानुसार वापरावे."],
+why_eyebrow:["Why Chaitanyaved","चैतन्यवेद का?"],why_h:["What you can expect","आपण काय अपेक्षा करू शकता"],
+w1h:["Time to listen","ऐकून घेण्यासाठी वेळ"],w1:["Consultations are unhurried, with a full history and prakriti assessment.","सल्ला निवांतपणे, संपूर्ण इतिहास व प्रकृती परीक्षणासह."],
+w2h:["A plan for you","आपल्यासाठी आखलेली योजना"],w2:["Therapy, diet and routine are chosen after your assessment.","आपल्या तपासणीनंतर उपचार, आहार व दिनचर्या निवडली जाते."],
+w3h:["Supervised therapies","देखरेखीखालील उपचार"],w3:["Panchakarma and other procedures are carried out under a physician's guidance.","पंचकर्म व इतर प्रक्रिया वैद्यांच्या मार्गदर्शनाखाली केल्या जातात."],
+w4h:["Honest guidance","प्रामाणिक मार्गदर्शन"],w4:["Clear explanations, no promises of cure, and referral when another specialist is needed.","स्पष्ट माहिती, बरे होण्याची हमी नाही, आणि गरज भासल्यास इतर तज्ज्ञांकडे पाठवणे."],
+why_note:["These statements describe the clinic's approach and will be confirmed by Chaitanyaved before launch.","ही विधाने चिकित्सालयाचा दृष्टिकोन मांडतात; प्रकाशनापूर्वी चैतन्यवेदकडून निश्चित केली जातील."],
+ga_eyebrow:["The clinic","चिकित्सालय"],ga_h:["Inside Chaitanyaved","चैतन्यवेदच्या आत"],
+ga_sub:["Spaces will be shown with the clinic's own photographs. Each frame below is a labelled placeholder.","चिकित्सालयाच्या स्वतःच्या छायाचित्रांसह ही जागा दाखवली जाईल. खालील प्रत्येक चौकट ही खूण केलेली तात्पुरती जागा आहे."],
+g1:["Clinic exterior","चिकित्सालयाचा दर्शनी भाग"],g2:["Reception","स्वागत कक्ष"],g3:["Consultation room","सल्ला कक्ष"],g4:["Panchakarma area","पंचकर्म विभाग"],g5:["Treatment rooms","उपचार कक्ष"],
+g_ph:["Photograph to be supplied by the clinic","छायाचित्र चिकित्सालयाकडून मिळणे बाकी"],
+bk_eyebrow:["Appointments","अपॉइंटमेंट"],bk_h:["Request an appointment","अपॉइंटमेंटची विनंती करा"],
+bk_sub:["Share a few details and the clinic will call you to confirm a time. Online booking is not yet connected, so this request is not a confirmed appointment.","थोडी माहिती द्या; वेळ निश्चित करण्यासाठी चिकित्सालय आपल्याला फोन करेल. ऑनलाइन बुकिंग अद्याप जोडलेले नाही, त्यामुळे ही विनंती म्हणजे निश्चित अपॉइंटमेंट नाही."],
+f_name:["Full name","पूर्ण नाव"],f_phone:["Phone number","फोन नंबर"],f_type:["Consultation or treatment","सल्ला किंवा उपचार"],f_msg:["Additional message (optional)","अधिक माहिती (ऐच्छिक)"],f_submit:["Send request","विनंती पाठवा"],
+e_name:["Enter your full name.","आपले पूर्ण नाव लिहा."],e_phone:["Enter a 10-digit mobile number.","१० अंकी मोबाइल नंबर लिहा."],
+e_doc:["Choose a doctor or No preference.","वैद्य निवडा किंवा 'कोणतेही चालतील' निवडा."],e_date:["Choose today or a later date.","आजची किंवा पुढील तारीख निवडा."],e_type:["Choose a consultation or treatment.","सल्ला किंवा उपचार निवडा."],
+s_h:["Request ready","विनंती तयार"],
+s_p:["Your details are kept on this page only. Online booking is not yet connected, so nothing has been sent and no appointment is confirmed. Please call the clinic, or copy these details into a message.","आपली माहिती फक्त या पानावर आहे. ऑनलाइन बुकिंग अद्याप जोडलेले नसल्याने काहीही पाठवले गेलेले नाही आणि अपॉइंटमेंट निश्चित झालेली नाही. कृपया चिकित्सालयाला फोन करा किंवा ही माहिती संदेशात कॉपी करा."],
+s_sent:["Your request has been sent. The clinic will call you to confirm a time; this is not yet a confirmed appointment.","आपली विनंती पाठवली आहे. वेळ निश्चित करण्यासाठी चिकित्सालय फोन करेल; ही अद्याप निश्चित अपॉइंटमेंट नाही."],
+copy:["Copy details","माहिती कॉपी करा"],copied:["Details copied","माहिती कॉपी झाली"],copy_fail:["Copy is blocked here. Select the text above instead.","येथे कॉपी करता येत नाही. वरील मजकूर निवडा."],edit:["Edit request","विनंती बदला"],
+og_consult:["Consultations","सल्ला"],general:["General Ayurvedic consultation","सर्वसाधारण आयुर्वेदिक सल्ला"],product_enq:["Product enquiry","उत्पादनाविषयी चौकशी"],og_other:["Other","इतर"],
+ct_eyebrow:["Visit","भेट द्या"],ct_h:["Contact and location","संपर्क व पत्ता"],
+address:["Address","पत्ता"],phone:["Phone","फोन"],whatsapp:["WhatsApp","व्हॉट्सॲप"],hours:["Opening hours","वेळ"],
+pending_detail:["Pending clinic verification","चिकित्सालयाकडून पडताळणी बाकी"],
+map_h:["Location","ठिकाण"],map_note:["The map and directions link will be added once the clinic address is verified.","चिकित्सालयाचा पत्ता निश्चित झाल्यावर नकाशा व दिशादर्शक लिंक जोडली जाईल."],
+open_maps:["Open in Google Maps","गूगल मॅप्समध्ये उघडा"],contact_cta:["Request a call back","परत फोनची विनंती"],
+f_tag:["Classical Ayurveda and Panchakarma, guided by physicians.","वैद्यांच्या मार्गदर्शनाखाली शास्त्रशुद्ध आयुर्वेद व पंचकर्म."],
+f_nav:["Explore","पाहा"],f_contact:["Contact","संपर्क"],f_social:["Social","सोशल मीडिया"],f_social_p:["Links will be added when supplied.","लिंक मिळाल्यावर जोडल्या जातील."],
+privacy:["Privacy policy","गोपनीयता धोरण"],
+copyright:["© 2026 Chaitanyaved Ayurved Chikitsalay & Panchkarma Kendra. All rights reserved.","© २०२६ चैतन्यवेद आयुर्वेद चिकित्सालय व पंचकर्म केंद्र. सर्व हक्क राखीव."],
+disclaimer:["Information on this website is for general awareness and does not replace a consultation.","या संकेतस्थळावरील माहिती सर्वसाधारण माहितीसाठी आहे; ती वैद्यकीय सल्ल्याची जागा घेत नाही."],
+priv_p:["Draft. This page does not store or transmit your personal details; the appointment form keeps information only in your open browser tab. A full privacy policy will be published once the clinic connects online booking.","प्राथमिक मसुदा. हे पान आपली वैयक्तिक माहिती साठवत किंवा पाठवत नाही; अपॉइंटमेंट फॉर्मची माहिती फक्त आपल्या उघड्या ब्राउझर टॅबमध्ये राहते. ऑनलाइन बुकिंग जोडल्यानंतर संपूर्ण गोपनीयता धोरण प्रकाशित केले जाईल."],
+call:["Call","फोन"],wa_short:["WhatsApp","व्हॉट्सॲप"],mbook:["Book","वेळ घ्या"],
+toast_phone:["Clinic phone number is pending verification.","चिकित्सालयाचा फोन नंबर पडताळणीसाठी प्रलंबित आहे."],
+toast_wa:["WhatsApp number is pending verification.","व्हॉट्सॲप नंबर पडताळणीसाठी प्रलंबित आहे."],
+toast_maps:["Map link will be added once the address is verified.","पत्ता निश्चित झाल्यावर नकाशा लिंक जोडली जाईल."],
+note_label:["Note","टीप"]
+};
+const t = (k)=> I[k] ? I[k][M()] : k;
+
+/* ---------- Treatments ---------- */
+const LOCAL_CTX=["One of the localised bastis (sthanika basti), different from the Panchakarma basti given rectally.","स्थानिक बस्तींपैकी एक; गुदमार्गाने दिल्या जाणाऱ्या पंचकर्मातील बस्तीपेक्षा ही वेगळी आहे."];
+const KAUMARA=["Children's care is the subject of Kaumarabhritya, one of the eight branches of Ayurveda.","कौमारभृत्य ही आयुर्वेदाच्या आठ अंगांपैकी बालआरोग्याची शाखा आहे."];
+const T=[
+{id:"panchakarma",cat:"pk",en:"Panchakarma",mr:"पंचकर्म",
+ d:["Panchakarma is the classical set of five Ayurvedic purification procedures, planned around the individual's constitution, condition and the season.","पंचकर्म म्हणजे पाच शास्त्रोक्त शोधन प्रक्रियांचा समूह. व्यक्तीची प्रकृती, तक्रार आणि ऋतू यांचा विचार करून त्याची योजना केली जाते."],
+ inv:["A course usually moves through three stages: preparation (purvakarma), the main procedure (pradhanakarma) and a guided recovery diet (paschatkarma).","उपचार साधारणपणे तीन टप्प्यांत होतो: पूर्वकर्म (तयारी), प्रधानकर्म (मुख्य प्रक्रिया) आणि पश्चात्कर्म (आहार व दिनचर्येसह पुनर्प्राप्ती)."],
+ ctx:["Described in the Charaka and Sushruta Samhitas as shodhana chikitsa, the cleansing branch of treatment.","चरक व सुश्रुत संहितांमध्ये याचे वर्णन शोधन चिकित्सा म्हणून केले आहे."],rel:["snehana","swedana","virechana"]},
+{id:"snehana",cat:"pk",en:"Snehana",mr:"स्नेहन",
+ d:["Snehana is oleation: the use of medicated oils or ghee, applied externally as massage or taken internally under supervision.","स्नेहन म्हणजे औषधी तेल किंवा तुपाचा वापर: बाहेरून मालिशद्वारे किंवा वैद्यांच्या देखरेखीखाली पोटातून."],
+ inv:["External snehana is a full-body oil massage (abhyanga). Internal snehana involves measured doses of medicated ghee over set days, decided by the physician.","बाह्य स्नेहनात संपूर्ण शरीराला तेलाने मालिश (अभ्यंग) केले जाते. आभ्यंतर स्नेहनात वैद्य ठरवतील त्याप्रमाणे ठराविक दिवस औषधी तूप दिले जाते."],
+ ctx:["Classically the first preparatory step (purvakarma) before the main Panchakarma procedures.","शास्त्रानुसार प्रधान पंचकर्मापूर्वीची ही पहिली पूर्वतयारी (पूर्वकर्म) आहे."],rel:["swedana","panchakarma","shashtika"]},
+{id:"swedana",cat:"pk",en:"Swedana / Steam Bath",mr:"स्वेदन (स्टीमबाथ)",
+ d:["Swedana is therapeutic sudation, inducing sweat with medicated herbal steam after oleation.","स्वेदन म्हणजे स्नेहनानंतर औषधी वनस्पतींच्या वाफेने घाम आणणारी प्रक्रिया."],
+ inv:["The patient typically sits in a steam chamber with the head kept outside while herbal steam is released for a set time.","रुग्णाला डोके बाहेर ठेवून स्वेदन पेटीत बसवले जाते आणि ठराविक वेळ औषधी वाफ दिली जाते."],
+ ctx:["The second preparatory step of purvakarma, usually given right after snehana.","पूर्वकर्मातील दुसरी पायरी; सहसा स्नेहनानंतर लगेच दिली जाते."],rel:["snehana","patra","shashtika"]},
+{id:"vamana",cat:"pk",en:"Vamana",mr:"वमन",
+ d:["Vamana is therapeutic emesis, one of the five main Panchakarma procedures, traditionally associated with kapha dosha.","वमन म्हणजे औषधीद्वारे करवलेली उलटी. पंचकर्मातील पाच प्रमुख प्रक्रियांपैकी ही एक असून शास्त्रात ती कफ दोषाशी जोडली जाते."],
+ inv:["After days of preparation, medicated decoctions, milk or similar preparations are given in the morning under close monitoring to induce controlled vomiting.","काही दिवसांच्या पूर्वतयारीनंतर सकाळी औषधी काढा, दूध किंवा तत्सम द्रव्ये देऊन वैद्यांच्या देखरेखीखाली नियंत्रित उलटी करवली जाते."],
+ ctx:["Performed only after careful assessment; it is not suitable for everyone.","काळजीपूर्वक तपासणीनंतरच केले जाते; ते प्रत्येकासाठी योग्य नसते."],rel:["virechana","snehana","panchakarma"]},
+{id:"virechana",cat:"pk",en:"Virechana",mr:"विरेचन",
+ d:["Virechana is therapeutic purgation, a main Panchakarma procedure traditionally associated with pitta dosha.","विरेचन म्हणजे औषधीद्वारे करवलेले जुलाब. ही प्रमुख पंचकर्म प्रक्रिया शास्त्रात पित्त दोषाशी जोडली जाते."],
+ inv:["Following oleation and sudation, a measured purgative preparation is given and the patient is observed through the day.","स्नेहन व स्वेदनानंतर ठराविक मात्रेत विरेचक औषध दिले जाते आणि दिवसभर रुग्णावर लक्ष ठेवले जाते."],
+ ctx:["Followed by a graded diet (samsarjana krama) over the next days.","त्यानंतरच्या दिवसांत क्रमाक्रमाने आहार (संसर्जन क्रम) दिला जातो."],rel:["vamana","basti","panchakarma"]},
+{id:"basti",cat:"pk",en:"Basti",mr:"बस्ती",
+ d:["Basti is the administration of medicated oils or decoctions through the rectal route, traditionally associated with vata dosha.","बस्ती म्हणजे गुदमार्गाने औषधी तेल किंवा काढा देण्याची प्रक्रिया. शास्त्रात ती वात दोषाशी जोडली जाते."],
+ inv:["Courses alternate oil-based (anuvasana) and decoction-based (niruha) bastis over a schedule set by the physician.","वैद्य ठरवतील त्या वेळापत्रकानुसार तेलयुक्त (अनुवासन) व काढ्याच्या (निरूह) बस्ती दिल्या जातात."],
+ ctx:["Classical texts give basti special importance, calling it half of all treatment (ardha chikitsa).","शास्त्रात बस्तीला विशेष महत्त्व असून तिला अर्ध चिकित्सा म्हटले आहे."],rel:["katibasti","uttarbasti","panchakarma"]},
+{id:"nasya",cat:"pk",en:"Nasya",mr:"नस्य",
+ d:["Nasya is the administration of medicated oils, powders or juices through the nostrils.","नस्य म्हणजे नाकपुड्यांद्वारे औषधी तेल, चूर्ण किंवा स्वरस देणे."],
+ inv:["A light face and neck massage and steam are followed by measured drops in each nostril, with the patient lying back.","चेहरा व मानेला हलके मालिश व शेक दिल्यानंतर रुग्णाला झोपवून प्रत्येक नाकपुडीत ठराविक थेंब सोडले जातात."],
+ ctx:["Classically used for the region above the collarbone (urdhvajatru); the nose is called the gateway to the head.","शास्त्रात जत्रूच्या वरील भागासाठी वापरले जाते; नाकाला शिराचे द्वार म्हटले आहे."],rel:["shirodhara","netra","panchakarma"]},
+{id:"raktamokshana",cat:"pk",en:"Raktamokshana",mr:"रक्तमोक्षण",
+ d:["Raktamokshana is the classical procedure of controlled bloodletting.","रक्तमोक्षण म्हणजे नियंत्रित पद्धतीने रक्त काढण्याची शास्त्रोक्त प्रक्रिया."],
+ inv:["A small, measured quantity of blood is removed, either with leeches (jalaukavacharana) or through a sterile needle from a vein.","जळवांद्वारे (जलौकावचरण) किंवा निर्जंतुक सुईने शिरेतून थोडे व ठराविक प्रमाणात रक्त काढले जाते."],
+ ctx:["Sushruta Samhita lists it as the fifth of the main purification procedures.","सुश्रुत संहितेत याचा पाचवे प्रमुख शोधन कर्म म्हणून उल्लेख आहे."],rel:["jalauka","agnikarma","viddhakarma"]},
+{id:"jalauka",cat:"pk",en:"Jalaukavacharana / Leech Therapy",mr:"जलौकावचरण",
+ d:["Jalaukavacharana is a form of raktamokshana that uses medicinal leeches.","जलौकावचरण हा रक्तमोक्षणाचा प्रकार असून यात औषधी जळवांचा वापर केला जातो."],
+ inv:["Leeches are applied to a selected area and removed after feeding; the site is then cleaned and dressed.","निवडलेल्या जागी जळवा लावल्या जातात आणि त्यांनी रक्त शोषल्यानंतर काढल्या जातात; नंतर ती जागा स्वच्छ करून मलमपट्टी केली जाते."],
+ ctx:["Sushruta describes in detail how leeches are selected, kept and applied.","जळवांची निवड, संगोपन व वापर यांचे तपशीलवार वर्णन सुश्रुतांनी केले आहे."],rel:["raktamokshana","lepa","agnikarma"]},
+{id:"shirodhara",cat:"th",en:"Shirodhara",mr:"शिरोधारा",
+ d:["Shirodhara is a continuous, gentle stream of medicated oil, buttermilk or decoction poured over the forehead.","शिरोधारा म्हणजे कपाळावर औषधी तेल, ताक किंवा काढ्याची सलग, संथ धार सोडणे."],
+ inv:["The patient lies down while the liquid flows from a suspended vessel onto the forehead for a set duration.","रुग्ण पाठीवर झोपलेला असताना वर टांगलेल्या पात्रातून ठराविक वेळ कपाळावर धार सोडली जाते."],
+ ctx:["A form of murdha taila, the classical group of oil therapies for the head.","शिरावरील तेल उपचारांच्या (मूर्धतैल) शास्त्रोक्त प्रकारांपैकी हा एक आहे."],rel:["nasya","snehana","acupressure"]},
+{id:"patra",cat:"th",en:"Patra Pottali Sweda",mr:"पत्रपोट्टली स्वेद",
+ d:["Patra Pottali Sweda is sudation using warm cloth bundles filled with medicinal leaves.","पत्रपोट्टली स्वेद म्हणजे औषधी पानांनी भरलेल्या गरम पुरचुंड्यांनी दिलेला शेक."],
+ inv:["Leaves are sautéed with oil, tied into bundles (pottali), warmed and pressed rhythmically over the body or a specific area.","पाने तेलात परतून त्यांच्या पुरचुंड्या (पोट्टली) बांधल्या जातात आणि गरम करून शरीरावर किंवा विशिष्ट भागावर लयबद्धपणे शेक दिला जातो."],
+ ctx:["A type of sankara (bolus) sweda within the swedana therapies.","स्वेदन उपचारांतील संकर (पिंड) स्वेदाचा हा प्रकार आहे."],rel:["shashtika","swedana","katibasti"]},
+{id:"shashtika",cat:"th",en:"Shashtika Shali Pinda Sweda",mr:"षष्ठिक शाली पिंड स्वेद",
+ d:["Shashtika Shali Pinda Sweda uses boluses of shashtika rice cooked in milk and herbal decoction.","षष्ठिक शाली पिंड स्वेदात दूध व औषधी काढ्यात शिजवलेल्या षष्ठिक तांदळाच्या पुरचुंड्यांचा वापर होतो."],
+ inv:["Warm rice boluses are massaged over the body after oil application, usually by two therapists working in rhythm.","तेल लावल्यानंतर गरम भाताच्या पुरचुंड्यांनी शरीराला मालिश केले जाते; सहसा दोन परिचारक एका लयीत हे करतात."],
+ ctx:["Shashtika is a traditional rice variety said to ripen in sixty days.","षष्ठिक हा साठ दिवसांत तयार होणारा पारंपरिक तांदूळ मानला जातो."],rel:["patra","snehana","swedana"]},
+{id:"lepa",cat:"th",en:"Lepa",mr:"लेप",
+ d:["Lepa is the application of a medicated herbal paste to the skin.","लेप म्हणजे औषधी वनस्पतींचा लेप त्वचेवर लावणे."],
+ inv:["A paste of powdered herbs mixed with water, decoction or other liquids is applied in a layer and removed once it begins to dry.","वनस्पतींचे चूर्ण पाणी, काढा किंवा इतर द्रवात मिसळून त्याचा थर लावला जातो आणि तो सुकू लागताच काढला जातो."],
+ ctx:["Classical texts specify the thickness and timing of each lepa.","शास्त्रात लेपाची जाडी व ठेवण्याचा कालावधी सांगितला आहे."],rel:["jalauka","patra","beauty"]},
+{id:"agnikarma",cat:"th",en:"Agnikarma",mr:"अग्निकर्म",
+ d:["Agnikarma is a classical para-surgical procedure applying controlled heat to a precise point.","अग्निकर्म म्हणजे विशिष्ट बिंदूवर नियंत्रित उष्णता देण्याची शास्त्रोक्त अनुशस्त्र प्रक्रिया."],
+ inv:["A heated metal probe (shalaka) briefly touches selected points on the skin; the physician decides the points and number of sittings.","गरम केलेल्या धातूच्या शलाकेने त्वचेवरील निवडक बिंदूंना क्षणभर स्पर्श केला जातो; बिंदू व बैठका वैद्य ठरवतात."],
+ ctx:["Described by Sushruta among the para-surgical measures (anushastra).","सुश्रुतांनी याचे वर्णन अनुशस्त्र कर्मांत केले आहे."],rel:["viddhakarma","janubasti","katibasti"]},
+{id:"viddhakarma",cat:"th",en:"Viddhakarma",mr:"विद्धकर्म",
+ d:["Viddhakarma is a classical procedure of piercing selected points with a fine needle.","विद्धकर्म म्हणजे बारीक सुईने निवडक बिंदूंवर वेध करण्याची शास्त्रोक्त प्रक्रिया."],
+ inv:["Sterile needles are inserted briefly at points chosen by the physician, often alongside agnikarma.","वैद्यांनी निवडलेल्या बिंदूंवर निर्जंतुक सुई थोड्या वेळासाठी टोचली जाते; अनेकदा अग्निकर्मासोबत केली जाते."],
+ ctx:["Sushruta Samhita discusses vedhana among the eight surgical procedures.","सुश्रुत संहितेत अष्टविध शस्त्रकर्मांमध्ये वेधनाचा उल्लेख आहे."],rel:["agnikarma","acupressure","raktamokshana"]},
+{id:"acupressure",cat:"th",en:"Acupressure",mr:"ऑक्युप्रेशर",
+ d:["Acupressure applies steady finger pressure to specific points on the body.","ऑक्युप्रेशरमध्ये शरीरावरील विशिष्ट बिंदूंवर बोटांनी स्थिर दाब दिला जातो."],
+ inv:["The therapist works through a sequence of points. It is non-invasive and done fully clothed.","परिचारक ठराविक क्रमाने बिंदूंवर दाब देतात. यात कोणतीही चीरफाड नसते."],
+ ctx:["A complementary practice that shares ideas with the Ayurvedic concept of marma points.","आयुर्वेदातील मर्म संकल्पनेशी साम्य असलेली पूरक पद्धत."],rel:["viddhakarma","shirodhara","yoga"]},
+{id:"katibasti",cat:"th",en:"Kati Basti",mr:"कटीबस्ती",
+ d:["Kati Basti retains warm medicated oil over the lower back inside a ring of dough.","कटीबस्तीमध्ये कणकेच्या पाळीत कोमट औषधी तेल कंबरेवर ठराविक वेळ धरून ठेवले जाते."],
+ inv:["A ring of black gram dough is shaped on the lower back and filled with warm oil, which is kept warm through the session.","कंबरेवर उडदाच्या पिठाची पाळी करून त्यात कोमट तेल भरले जाते आणि उपचारादरम्यान तेल कोमट ठेवले जाते."],
+ ctx:LOCAL_CTX,rel:["manyabasti","janubasti","basti"]},
+{id:"manyabasti",cat:"th",en:"Manya Basti",mr:"मन्याबस्ती",
+ d:["Manya Basti applies the same technique over the back of the neck.","मन्याबस्तीत हीच पद्धत मानेच्या मागील भागावर वापरली जाते."],
+ inv:["The dough ring is placed over the cervical region with the patient lying face down.","रुग्णाला पोटावर झोपवून मानेच्या भागावर पाळी केली जाते."],
+ ctx:LOCAL_CTX,rel:["katibasti","nasya","janubasti"]},
+{id:"janubasti",cat:"th",en:"Janu Basti",mr:"जानुबस्ती",
+ d:["Janu Basti retains warm medicated oil over the knee joint.","जानुबस्तीत गुडघ्यावर कोमट औषधी तेल धरून ठेवले जाते."],
+ inv:["A dough ring is built around the kneecap and filled with warm oil; one or both knees may be treated.","गुडघ्याच्या वाटीभोवती पाळी करून त्यात कोमट तेल भरले जाते; एक किंवा दोन्ही गुडघ्यांवर केले जाते."],
+ ctx:LOCAL_CTX,rel:["katibasti","agnikarma","patra"]},
+{id:"hridyabasti",cat:"th",en:"Hridya Basti",mr:"हृदयबस्ती",
+ d:["Hridya Basti retains warm medicated oil or decoction over the chest, in the region of the heart.","हृदयबस्तीत छातीवर हृदयाच्या भागी कोमट औषधी तेल किंवा काढा धरून ठेवला जातो."],
+ inv:["With the patient lying on the back, a dough ring is placed over the left side of the chest and filled with lukewarm liquid.","रुग्णाला पाठीवर झोपवून छातीच्या डाव्या भागावर पाळी करून त्यात कोमट द्रव भरले जाते."],
+ ctx:LOCAL_CTX,note:["A supportive therapy only. It does not replace cardiac evaluation or treatment.","हा केवळ पूरक उपचार आहे. तो हृदयरोगतज्ज्ञांच्या तपासणी किंवा उपचारांची जागा घेत नाही."],rel:["katibasti","shirodhara","basti"]},
+{id:"netra",cat:"th",en:"Netra Tarpana",mr:"नेत्रतर्पण",
+ d:["Netra Tarpana bathes the eyes in medicated ghee held within a dough ring.","नेत्रतर्पणात उडदाच्या पिठाच्या पाळीत औषधी तूप भरून डोळे त्यात ठेवले जातात."],
+ inv:["Rings are built around both eyes and filled with warm, liquefied ghee; the patient gently opens and closes the eyes for a set time.","दोन्ही डोळ्यांभोवती पाळी करून त्यात कोमट पातळ तूप भरले जाते; ठराविक वेळ रुग्ण हळूहळू डोळ्यांची उघडझाप करतो."],
+ ctx:["One of the kriyakalpa, the classical eye therapies of Ayurveda.","आयुर्वेदातील नेत्रोपचारांच्या (क्रियाकल्प) प्रकारांपैकी एक."],
+ note:["It does not replace an eye examination by an ophthalmologist.","हे नेत्रतज्ज्ञांच्या तपासणीची जागा घेत नाही."],rel:["nasya","shirodhara","snehana"]},
+{id:"uttarbasti",cat:"th",tags:["wo"],en:"Uttarbasti",mr:"उत्तरबस्ती",
+ d:["Uttarbasti is the administration of medicated oil or decoction through the vaginal or urethral route.","उत्तरबस्ती म्हणजे योनीमार्ग किंवा मूत्रमार्गाने औषधी तेल किंवा काढा देणे."],
+ inv:["Performed by a qualified physician under aseptic conditions; for women, usually at a specific phase of the menstrual cycle.","पात्र वैद्यांद्वारे निर्जंतुक वातावरणात केली जाते; स्त्रियांमध्ये सहसा मासिक पाळीच्या ठराविक टप्प्यात."],
+ ctx:["Described in classical texts as an important procedure in women's health (stri roga).","शास्त्रात स्त्रीरोग चिकित्सेतील महत्त्वाची प्रक्रिया म्हणून वर्णन आहे."],rel:["fertility","menstrual","basti"]},
+{id:"yoga",cat:"th",en:"Yoga & Pranayama Guidance",mr:"योग व प्राणायाम मार्गदर्शन",
+ d:["Guided yoga and pranayama as part of an overall wellness routine.","एकूण आरोग्यदायी दिनचर्येचा भाग म्हणून मार्गदर्शित योग व प्राणायाम."],
+ inv:["Postures and breathing practices are chosen according to the individual's fitness and any medical advice.","व्यक्तीची क्षमता व वैद्यकीय सल्ला लक्षात घेऊन आसने व श्वसनाचे प्रकार निवडले जातात."],
+ ctx:["Yoga and Ayurveda share common roots in classical Indian thought.","योग व आयुर्वेद या दोन्हींचे मूळ भारतीय शास्त्रपरंपरेत आहे."],rel:["garbhasanskar","shirodhara","acupressure"]},
+{id:"garbhasanskar",cat:"wo",en:"Garbhasanskar",mr:"गर्भसंस्कार",
+ d:["Garbhasanskar is traditional guidance for couples before and during pregnancy, covering diet, routine and mental wellbeing.","गर्भसंस्कार म्हणजे गर्भधारणेपूर्वी व गर्भावस्थेत दांपत्याला आहार, दिनचर्या व मानसिक स्वास्थ्याबद्दल दिले जाणारे पारंपरिक मार्गदर्शन."],
+ inv:["Sessions may include diet and routine advice, music, reading and gentle yoga, alongside regular obstetric care.","आहार व दिनचर्या मार्गदर्शन, संगीत, वाचन व सौम्य योग यांचा समावेश असू शकतो; नियमित प्रसूतितज्ज्ञांच्या तपासणीसोबत."],
+ ctx:["Rooted in the classical idea of suprajanana, care for healthy progeny.","निरोगी संततीसाठीच्या सुप्रजा संकल्पनेवर आधारित."],
+ note:["Complements, and never replaces, care from your obstetrician.","हे प्रसूतितज्ज्ञांच्या उपचारांना पूरक आहे; त्यांची जागा घेत नाही."],rel:["fertility","womens","yoga"]},
+{id:"womens",cat:"wo",en:"Women's Ayurvedic Wellness Consultation",mr:"स्त्री आरोग्य आयुर्वेदिक सल्ला",
+ d:["A one-to-one Ayurvedic consultation on women's health at any stage of life.","स्त्रियांच्या आयुष्यातील कोणत्याही टप्प्यातील आरोग्याविषयी वैयक्तिक आयुर्वेदिक सल्ला."],
+ inv:["Detailed history, prakriti assessment and a discussion of diet, routine and suitable therapies.","सविस्तर इतिहास, प्रकृती परीक्षण आणि आहार, दिनचर्या व योग्य उपचारांबद्दल चर्चा."],
+ ctx:["Women's health is covered in the classical texts under stri roga and prasuti tantra.","शास्त्रात स्त्रीरोग व प्रसूतितंत्र या अंतर्गत स्त्री आरोग्याचे वर्णन आहे."],rel:["menstrual","pcod","garbhasanskar"]},
+{id:"menstrual",cat:"wo",en:"Menstrual Health Consultation",mr:"मासिक पाळी आरोग्य सल्ला",
+ d:["Consultation for concerns related to the menstrual cycle.","मासिक पाळीशी संबंधित तक्रारींसाठी सल्ला."],
+ inv:["History, examination and review of any reports, followed by a personalised plan.","इतिहास, तपासणी व उपलब्ध रिपोर्ट्सचा आढावा, त्यानंतर वैयक्तिक योजना."],
+ ctx:["The classical texts discuss menstrual health under artava.","शास्त्रात आर्तव या संज्ञेखाली मासिक पाळीच्या आरोग्याचे वर्णन आहे."],rel:["pcod","uttarbasti","womens"]},
+{id:"pcod",cat:"wo",en:"PCOD / PCOS Consultation",mr:"पीसीओडी / पीसीओएस सल्ला",
+ d:["Consultation for women diagnosed with, or concerned about, PCOD or PCOS.","पीसीओडी/पीसीओएसचे निदान झालेल्या किंवा त्याबद्दल शंका असलेल्या स्त्रियांसाठी सल्ला."],
+ inv:["Review of history and reports, with guidance on diet, routine and activity, coordinated with your gynaecologist where needed.","इतिहास व रिपोर्ट्सचा आढावा, आहार, दिनचर्या व व्यायामाबद्दल मार्गदर्शन; गरजेनुसार स्त्रीरोगतज्ज्ञांशी समन्वय."],
+ ctx:["Ayurveda approaches it through the individual's constitution and lifestyle.","आयुर्वेदात व्यक्तीची प्रकृती व जीवनशैली यांच्या आधारे याचा विचार केला जातो."],rel:["menstrual","fertility","uttarbasti"]},
+{id:"fertility",cat:"wo",en:"Fertility Consultation",mr:"प्रजनन आरोग्य सल्ला",
+ d:["Consultation for couples planning a family or facing difficulty conceiving.","कुटुंबाचे नियोजन करणाऱ्या किंवा गर्भधारणेत अडचण येणाऱ्या दांपत्यांसाठी सल्ला."],
+ inv:["Both partners may be assessed; medical reports are reviewed and next steps discussed.","दोन्ही जोडीदारांची तपासणी होऊ शकते; रिपोर्ट्सचा आढावा घेऊन पुढील पावले ठरवली जातात."],
+ ctx:["The classical texts emphasise the health of both partners (beeja shuddhi) before conception.","शास्त्रात गर्भधारणेपूर्वी दोघांच्या आरोग्यावर (बीजशुद्धी) भर दिला आहे."],rel:["garbhasanskar","uttarbasti","pcod"]},
+{id:"beauty",cat:"wo",en:"Skin, Hair & Beauty Consultation",mr:"त्वचा, केस व सौंदर्य सल्ला",
+ d:["Consultation for skin, hair and cosmetic concerns from an Ayurvedic perspective.","त्वचा, केस व सौंदर्यविषयक तक्रारींसाठी आयुर्वेदिक सल्ला."],
+ inv:["Assessment of skin and hair type, lifestyle and diet, with suitable care advice.","त्वचा व केसांचा प्रकार, जीवनशैली व आहार यांचे परीक्षण आणि योग्य काळजीबद्दल सल्ला."],
+ ctx:["Ayurveda links skin and hair to overall balance and digestion.","आयुर्वेदात त्वचा व केसांचा संबंध एकूण संतुलन व पचनाशी जोडला जातो."],rel:["lepa","womens","jalauka"]},
+{id:"suvarnaprashan",cat:"ch",en:"Suvarnaprashan",mr:"सुवर्णप्राशन",
+ d:["Suvarnaprashan is a traditional preparation of processed gold with ghee and honey given to children.","सुवर्णप्राशन म्हणजे मुलांना दिले जाणारे सुवर्णभस्म, तूप व मध यांचे पारंपरिक मिश्रण."],
+ inv:["A few drops are given by mouth, traditionally on Pushya Nakshatra days; the age range and schedule are set by the physician.","पारंपरिकरीत्या पुष्य नक्षत्राच्या दिवशी काही थेंब तोंडाद्वारे दिले जातात; वयोमर्यादा व वेळापत्रक वैद्य ठरवतात."],
+ ctx:["Described in the Kashyapa Samhita, the classical text on children's health.","बालआरोग्यावरील काश्यप संहितेत याचे वर्णन आहे."],
+ note:["Pushya Nakshatra dates at the clinic will be published once confirmed.","चिकित्सालयातील पुष्य नक्षत्र तारखा निश्चित झाल्यावर प्रकाशित केल्या जातील."],rel:["child","childnutrition","childmemory"]},
+{id:"child",cat:"ch",en:"Children's Ayurvedic Wellness Consultation",mr:"बालआरोग्य आयुर्वेदिक सल्ला",
+ d:["Ayurvedic consultation for children's general health and wellbeing.","मुलांच्या सर्वसाधारण आरोग्य व स्वास्थ्यासाठी आयुर्वेदिक सल्ला."],
+ inv:["A gentle assessment with the parent present, covering growth, appetite, sleep and routine.","पालकांच्या उपस्थितीत वाढ, भूक, झोप व दिनचर्येबद्दल सौम्य तपासणी."],
+ ctx:KAUMARA,rel:["suvarnaprashan","childnutrition","childcommon"]},
+{id:"childnutrition",cat:"ch",en:"Child Nutrition Guidance",mr:"बालपोषण मार्गदर्शन",
+ d:["Guidance on diet and nutrition for growing children.","वाढत्या मुलांच्या आहार व पोषणाबद्दल मार्गदर्शन."],
+ inv:["Discussion of eating habits and practical, age-appropriate diet suggestions.","खाण्याच्या सवयींवर चर्चा आणि वयानुसार व्यवहार्य आहार सूचना."],
+ ctx:KAUMARA,rel:["child","childgrowth","suvarnaprashan"]},
+{id:"childmemory",cat:"ch",en:"Concentration & Memory Consultation",mr:"बुद्धी व स्मरणशक्ती सल्ला",
+ d:["Consultation for parents concerned about a child's concentration, memory or learning.","मुलाची एकाग्रता, स्मरणशक्ती किंवा अभ्यासाबद्दल चिंता असलेल्या पालकांसाठी सल्ला."],
+ inv:["Review of routine, sleep, screen time and diet, with suitable advice.","दिनचर्या, झोप, स्क्रीन टाइम व आहार यांचा आढावा आणि योग्य सल्ला."],
+ ctx:["The classical texts describe medhya rasayana, preparations traditionally linked with intellect.","शास्त्रात बुद्धीशी पारंपरिकरीत्या जोडलेल्या मेध्य रसायनांचे वर्णन आहे."],rel:["suvarnaprashan","child","childnutrition"]},
+{id:"childgrowth",cat:"ch",en:"Growth & Development Consultation",mr:"वाढ व विकास सल्ला",
+ d:["Consultation on a child's growth and physical development, including height.","उंचीसह मुलांची वाढ व शारीरिक विकास याबद्दल सल्ला."],
+ inv:["Growth history, diet and activity are reviewed; referral to a paediatrician is advised where needed.","वाढीचा इतिहास, आहार व हालचाल यांचा आढावा; गरज असल्यास बालरोगतज्ज्ञांकडे पाठवले जाते."],
+ ctx:KAUMARA,rel:["childnutrition","child","suvarnaprashan"]},
+{id:"childcommon",cat:"ch",en:"Recurring Childhood Concerns",mr:"मुलांच्या वारंवार येणाऱ्या तक्रारी",
+ d:["Consultation for recurring childhood concerns such as frequent colds, worms or seasonal illness.","वारंवार सर्दी, जंत किंवा ऋतुजन्य आजार अशा लहान मुलांच्या वारंवार येणाऱ्या तक्रारींसाठी सल्ला."],
+ inv:["Assessment and advice. Urgent symptoms, such as high fever or breathing difficulty, must be seen by a paediatrician first.","तपासणी व सल्ला. जास्त ताप किंवा श्वास घेण्यास त्रास अशी तातडीची लक्षणे असल्यास आधी बालरोगतज्ज्ञांना दाखवावे."],
+ ctx:KAUMARA,rel:["child","childnutrition","suvarnaprashan"]}
+];
+const TMAP=Object.fromEntries(T.map(x=>[x.id,x]));
+
+/* ---------- Concerns ---------- */
+const C=[
+["Digestive health & acidity","पचनसंस्था व आम्लपित्त","Agni · पाचन"],
+["Joint, bone & spine","सांधे, हाडे व मणका","Asthi · संधी"],
+["Respiratory health","श्वसनसंस्था (दमा, जुनाट सर्दी, खोकला)","Prana · श्वास"],
+["Skin & hair","त्वचा व केस","Tvak · केश"],
+["Piles & fistula","मूळव्याध व भगंदर","Arsha · भगंदर"],
+["Neurological & mobility concerns","मेंदू व हालचालीसंबंधी तक्रारी","Vata · मज्जा"],
+["Weight management","वजन व्यवस्थापन","Meda · स्थौल्य"],
+["Thyroid, diabetes & blood pressure","थायरॉईड, मधुमेह व रक्तदाब","Prameha · रक्तदाब"],
+["Women's health & fertility","स्त्री आरोग्य व प्रजनन","Stri · आर्तव"],
+["Children's health & wellness","बालआरोग्य व स्वास्थ्य","Bala · कौमारभृत्य"],
+["Pregnancy wellness & Garbhasanskar","गर्भावस्था व गर्भसंस्कार","Garbha · सुप्रजा"]
+];
+
+/* ---------- Products ---------- */
+const PG={ras:"pc_ras",care:"pc_care",kids:"pc_kids",pure:"pc_pure",classic:"pc_classic"};
+const P=[
+{id:"chyawanprash",g:"ras",f:"jar",en:"Chyawanprash",mr:"च्यवनप्राश",d:["Classical herbal jam (avaleha) in the rasayana tradition.","रसायन परंपरेतील शास्त्रोक्त अवलेह."]},
+{id:"amla",g:"ras",f:"pack",en:"Amla Candy",mr:"आवळा कँडी",d:["Candied amla (Indian gooseberry).","साखरेत मुरवलेला आवळा."]},
+{id:"asthi",g:"ras",f:"jar",en:"Asthi Poshak Kalp",mr:"अस्थिपोषक कल्प",d:["Kalp (granule) preparation. Composition to be listed by the clinic.","कल्प स्वरूपातील उत्पादन. घटकांची माहिती चिकित्सालयाकडून दिली जाईल."]},
+{id:"ananta",g:"ras",f:"jar",en:"Ananta Kalp",mr:"अनंता कल्प",d:["Kalp (granule) preparation. Composition to be listed by the clinic.","कल्प स्वरूपातील उत्पादन. घटकांची माहिती चिकित्सालयाकडून दिली जाईल."]},
+{id:"gulkand",g:"ras",f:"jar",en:"Gulkand",mr:"गुलकंद",d:["Traditional rose-petal preserve.","गुलाबाच्या पाकळ्यांपासून बनवलेला पारंपरिक गुलकंद."]},
+{id:"shatavari",g:"ras",f:"jar",en:"Shatavari Kalp",mr:"शतावरी कल्प",d:["Kalp preparation based on Shatavari.","शतावरीवर आधारित कल्प."]},
+{id:"vajamrut",g:"ras",f:"bottle",en:"Vajamrut",mr:"वजामृत",d:null},
+{id:"shatdhaut",g:"care",f:"jar",en:"Shatdhaut Ghrita",mr:"शतधौत घृत",d:["Ghee washed a hundred times, a classical base for topical use.","शंभर वेळा धुतलेले तूप; त्वचेवर लावण्याचा पारंपरिक आधार."]},
+{id:"vanglep",g:"care",f:"tube",en:"Vang Lep",mr:"वांगलेप",d:["Topical lepa listed under skin care.","त्वचेच्या काळजीअंतर्गत सूचीबद्ध लेप."]},
+{id:"surma",g:"care",f:"tube",en:"Surma Cream",mr:"सुरमा क्रीम",d:null},
+{id:"facewash",g:"care",f:"tube",en:"Face Wash",mr:"फेस वॉश",d:null},
+{id:"facepack",g:"care",f:"pack",en:"Face Pack",mr:"फेस पॅक",d:null},
+{id:"keshya",g:"care",f:"bottle",en:"Keshya Hair Oil",mr:"केश्य तेल",d:["Herbal hair oil.","केसांसाठी औषधी तेल."]},
+{id:"pimple",g:"care",f:"tube",en:"Pimple Cream",mr:"पिंपल क्रीम",d:null},
+{id:"dandruff",g:"care",f:"bottle",en:"Dandruff Oil",mr:"डॅन्ड्रफ तेल",d:null},
+{id:"kidtonic",g:"kids",f:"bottle",en:"Children's Tonic",mr:"लहान मुलांचे टॉनिक",d:["Tonic listed for children.","मुलांसाठी सूचीबद्ध टॉनिक."]},
+{id:"buddhi",g:"kids",f:"bottle",en:"Buddhi Vardhak Tonic",mr:"बुद्धीवर्धक टॉनिक",d:["Tonic listed in the children's range.","मुलांच्या श्रेणीतील टॉनिक."]},
+{id:"oils",g:"pure",f:"bottle",en:"Pure Ayurvedic Oils",mr:"शुद्ध आयुर्वेदिक तेले",d:["Single and compound oils used in therapies and home care.","उपचार व घरगुती वापरासाठी एकल व मिश्र तेले."]},
+{id:"ghee",g:"pure",f:"jar",en:"Pure Ghee",mr:"शुद्ध तूप",d:null},
+{id:"honey",g:"pure",f:"jar",en:"Pure Honey",mr:"शुद्ध मध",d:null},
+{id:"churna",g:"classic",f:"pack",en:"Ayurvedic Churna",mr:"आयुर्वेदिक चूर्ण",d:["Herbal powders, single or compound.","एकल किंवा मिश्र वनस्पतींची चूर्णे."]},
+{id:"guti",g:"classic",f:"pills",en:"Guti",mr:"गुटी",d:["Pill form of classical formulations.","शास्त्रोक्त औषधांचे गोळी स्वरूप."]},
+{id:"vati",g:"classic",f:"pills",en:"Vati",mr:"वटी",d:["Tablet form of classical formulations.","शास्त्रोक्त औषधांचे वटी (गोळी) स्वरूप."]},
+{id:"kwath",g:"classic",f:"bottle",en:"Kashaya / Kwath",mr:"कषाय / काढा",d:["Herbal decoctions.","वनस्पतींचे काढे."]},
+{id:"asava",g:"classic",f:"bottle",en:"Asava & Arishta",mr:"आसव व अरिष्ट",d:["Classical fermented liquid preparations.","शास्त्रोक्त आंबवलेली द्रव औषधे."]},
+{id:"othermed",g:"classic",f:"pack",en:"Other Ayurvedic Medicines",mr:"इतर आयुर्वेदिक औषधे",d:["Further classical medicines, dispensed on prescription.","इतर शास्त्रोक्त औषधे, वैद्यांच्या चिठ्ठीनुसार."]}
+];
+
+/* ---------- helpers ---------- */
+const $=(s,r=document)=>r.querySelector(s);
+const $$=(s,r=document)=>Array.from(r.querySelectorAll(s));
+const names=(x)=> lang==='mr' ? [x.mr,x.en] : [x.en,x.mr];
+const norm=(s)=>String(s).toLowerCase().normalize('NFC');
+const toastEl=$('#toast'); let toastT;
+function toast(msg){toastEl.textContent=msg;toastEl.classList.add('show');clearTimeout(toastT);toastT=setTimeout(()=>toastEl.classList.remove('show'),2600)}
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function artSVG(i,cat){
+  const r=(i*37)%360, r2=(i*53+40)%360, s=.8+((i*7)%5)/10;
+  return `<svg class="art" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <circle cx="${220+(i%3)*20}" cy="${90+(i%4)*10}" r="${70+(i%3)*12}" fill="none" stroke="var(--art-b)" stroke-opacity=".35"/>
+    <circle cx="${220+(i%3)*20}" cy="${90+(i%4)*10}" r="${40+(i%2)*10}" fill="var(--art-b)" fill-opacity=".12"/>
+    <g transform="translate(${120+(i%5)*12} 150) rotate(${-40+r%60}) scale(${s})"><use href="#leaf" width="40" height="80" x="-20" y="-80" style="color:var(--art-a)"/></g>
+    <g transform="translate(${170+(i%4)*10} 160) rotate(${10+r2%50}) scale(${s*.8})"><use href="#leaf" width="40" height="80" x="-20" y="-80" style="color:var(--art-a);opacity:.7"/></g>
+    <path d="M20 ${170-(i%3)*8} C80 ${130+(i%4)*6} 120 ${190} 200 150" fill="none" stroke="var(--art-a)" stroke-opacity=".35"/>
+  </svg>`;
+}
+function productSVG(f){
+  const st='fill="none" stroke="currentColor" stroke-width="2"';
+  if(f==='jar') return `<svg viewBox="0 0 100 110" ${st} aria-hidden="true"><rect x="28" y="8" width="44" height="14" rx="2"/><path d="M24 26h52l4 10v58a8 8 0 0 1-8 8H28a8 8 0 0 1-8-8V36z"/><path d="M30 52h40v26H30z" fill="currentColor" fill-opacity=".12"/><use href="#leaf" x="44" y="54" width="12" height="22"/></svg>`;
+  if(f==='bottle') return `<svg viewBox="0 0 100 110" ${st} aria-hidden="true"><rect x="40" y="4" width="20" height="12" rx="2"/><path d="M42 16v12c-12 4-18 12-18 24v42a8 8 0 0 0 8 8h36a8 8 0 0 0 8-8V52c0-12-6-20-18-24V16"/><path d="M30 60h40v26H30z" fill="currentColor" fill-opacity=".12"/><use href="#leaf" x="44" y="62" width="12" height="22"/></svg>`;
+  if(f==='tube') return `<svg viewBox="0 0 100 110" ${st} aria-hidden="true"><path d="M30 10h40l-4 70H34z"/><rect x="40" y="80" width="20" height="14" rx="2"/><path d="M36 30h28v28H36z" fill="currentColor" fill-opacity=".12"/><use href="#leaf" x="44" y="33" width="12" height="22"/></svg>`;
+  if(f==='pills') return `<svg viewBox="0 0 100 110" ${st} aria-hidden="true"><rect x="18" y="24" width="64" height="62" rx="6"/><circle cx="36" cy="44" r="7" fill="currentColor" fill-opacity=".18"/><circle cx="64" cy="44" r="7" fill="currentColor" fill-opacity=".18"/><circle cx="36" cy="68" r="7" fill="currentColor" fill-opacity=".18"/><circle cx="64" cy="68" r="7" fill="currentColor" fill-opacity=".18"/></svg>`;
+  return `<svg viewBox="0 0 100 110" ${st} aria-hidden="true"><path d="M22 20h56l-4 10 4 10v56a6 6 0 0 1-6 6H28a6 6 0 0 1-6-6V40l4-10z"/><path d="M30 52h40v28H30z" fill="currentColor" fill-opacity=".12"/><use href="#leaf" x="44" y="55" width="12" height="22"/></svg>`;
+}
+
+/* ---------- Treatments catalogue ---------- */
+let tFilter='all', pFilter='all';
+const TCATS=['all','pk','th','wo','ch'];
+function renderTChips(){
+  $('#tChips').innerHTML=TCATS.map(c=>`<button class="chip" data-tf="${c}" aria-pressed="${c===tFilter}">${t(c==='all'?'f_all':'cat_'+c)}</button>`).join('');
+}
+function renderT(){
+  const q=norm($('#tSearch').value.trim());
+  const list=T.filter(x=>(tFilter==='all'||x.cat===tFilter||(x.tags||[]).includes(tFilter)) && (!q||norm(x.en+' '+x.mr+' '+x.id).includes(q)));
+  $('#tCount').textContent=t('count_t').replace('{n}',devDigits(list.length));
+  $('#tGrid').innerHTML=list.length? list.map((x)=>{const [a,b]=names(x);const i=T.indexOf(x);return `
+  <article class="tcard tilt">
+    <div class="tvis c-${x.cat}">${artSVG(i,x.cat)}<span class="ph-lab">${t('photo_short')}</span><span class="deva-big" aria-hidden="true">${esc(x.mr.split(' ')[0])}</span></div>
+    <div class="tbody">
+      <div class="tmeta"><span class="eyebrow">${t('cat_'+x.cat)}</span><span class="pend">${t('pending')}</span></div>
+      <h3>${esc(a)}</h3><p class="alt ${lang==='en'?'deva':''}">${esc(b)}</p>
+      <p class="d">${esc(L(x.d))}</p>
+      <div class="tact"><button class="link" data-open="${x.id}">${t('learn')} <span aria-hidden="true">→</span></button><button class="btn btn-ghost btn-sm" data-book="${x.id}">${t('enquire')}</button></div>
+    </div>
+  </article>`}).join('') : `<p class="empty">${t('empty')}</p>`;
+  bindTilt();
+}
+
+/* ---------- Products ---------- */
+const PCATS=['all','ras','care','kids','pure','classic'];
+function renderPChips(){
+  $('#pChips').innerHTML=PCATS.map(c=>`<button class="chip" data-pf="${c}" aria-pressed="${c===pFilter}">${t(c==='all'?'f_all':PG[c])}</button>`).join('');
+}
+function renderP(){
+  const q=norm($('#pSearch').value.trim());
+  const list=P.filter(x=>(pFilter==='all'||x.g===pFilter)&&(!q||norm(x.en+' '+x.mr+' '+x.id).includes(q)));
+  $('#pCount').textContent=t('count_p').replace('{n}',devDigits(list.length));
+  $('#pGrid').innerHTML=list.length? list.map(x=>{const [a,b]=names(x);return `
+  <article class="pcard tilt">
+    <div class="pimg">${productSVG(x.f)}<span class="ph-lab">${t('image_pending')}</span></div>
+    <div class="pbody">
+      <div class="tmeta"><span class="eyebrow">${t(PG[x.g])}</span></div>
+      <h3>${esc(a)}</h3><p class="alt ${lang==='en'?'deva':''}">${esc(b)}</p>
+      <p class="d">${esc(x.d?L(x.d):t('p_generic'))}</p>
+      <dl class="pmeta"><dt>${t('pack')}</dt><dd>${t('not_supplied')}</dd><dt>${t('price')}</dt><dd>${t('not_supplied')}</dd></dl>
+      <div class="pact"><span class="pend">${t('pending')}</span><button class="btn btn-ghost btn-sm" data-penq="${x.id}">${t('enquire')}</button></div>
+    </div>
+  </article>`}).join('') : `<p class="empty">${t('empty')}</p>`;
+  bindTilt();
+}
+
+/* ---------- Concerns ---------- */
+function renderC(){
+  $('#concernGrid').innerHTML=C.map((c,i)=>`<div class="concern"><span class="idx">${devDigits(String(i+1).padStart(2,'0'))}</span><h3>${esc(lang==='mr'?c[1]:c[0])}</h3><p class="alt">${esc(c[2])}</p><button class="link" data-concern="${i}">${t('ask')} <span aria-hidden="true">→</span></button></div>`).join('');
+}
+
+/* ---------- Doctors ---------- */
+function renderDocs(){
+  $('#docs').innerHTML=[1,2].map(n=>`
+  <article class="doc tilt">
+    <div class="doc-photo"><svg viewBox="0 0 100 120" fill="currentColor" aria-hidden="true"><circle cx="50" cy="38" r="22"/><path d="M8 120c4-30 20-46 42-46s38 16 42 46z"/></svg><span class="ph-lab">${t('photo_pending')}</span></div>
+    <div class="doc-body">
+      <span class="eyebrow">${t('doc_role')} ${devDigits(n)}</span>
+      <h3>${t('doc_name')}</h3>
+      <dl><dt>${t('d_qual')}</dt><dd class="ph-text">${t('tbp')}</dd><dt>${t('d_exp')}</dt><dd class="ph-text">${t('tbp')}</dd><dt>${t('d_spec')}</dt><dd class="ph-text">${t('tbp')}</dd><dt>${t('d_bio')}</dt><dd class="ph-text">${t('tbp')}</dd></dl>
+      <span class="pend" style="align-self:flex-start">${t('pending')}</span>
+      <button class="btn btn-ghost btn-sm" style="align-self:flex-start" data-book-doc="d${n}">${t('book_with')}</button>
+    </div>
+  </article>`).join('');
+  bindTilt();
+}
+
+/* ---------- Gallery ---------- */
+function renderGallery(){
+  const art=[
+    `<path d="M40 260V120l160-70 160 70v140" stroke="currentColor" stroke-width="2" fill="none"/><rect x="170" y="170" width="60" height="90" stroke="currentColor" fill="none" stroke-width="2"/><path d="M0 262h600" stroke="currentColor" stroke-width="2"/>`,
+    `<rect x="60" y="140" width="200" height="60" stroke="currentColor" fill="none" stroke-width="2"/><circle cx="300" cy="80" r="30" stroke="currentColor" fill="none" stroke-width="2"/>`,
+    `<rect x="70" y="120" width="140" height="70" stroke="currentColor" fill="none" stroke-width="2"/><circle cx="110" cy="90" r="16" stroke="currentColor" fill="none" stroke-width="2"/><circle cx="250" cy="90" r="16" stroke="currentColor" fill="none" stroke-width="2"/>`,
+    `<path d="M80 170h300c0 20-20 34-40 34H120c-20 0-40-14-40-34z" stroke="currentColor" fill="none" stroke-width="2"/><path d="M230 40v60" stroke="currentColor" stroke-width="2"/><path d="M210 100h40l-6 16h-28z" stroke="currentColor" fill="none" stroke-width="2"/>`,
+    `<rect x="60" y="150" width="160" height="40" stroke="currentColor" fill="none" stroke-width="2"/><rect x="260" y="150" width="160" height="40" stroke="currentColor" fill="none" stroke-width="2"/><path d="M40 80h420" stroke="currentColor" stroke-width="2" stroke-dasharray="6 8"/>`
+  ];
+  $('#gallery-grid').innerHTML=['g1','g2','g3','g4','g5'].map((k,i)=>`<figure class="gtile" style="margin:0"><svg viewBox="0 0 480 280" preserveAspectRatio="xMidYMid slice" aria-hidden="true">${art[i]}</svg><figcaption class="gl"><b>${t(k)}</b><span>${t('g_ph')}</span></figcaption></figure>`).join('');
+}
+
+/* ---------- Contact ---------- */
+function renderContact(){
+  const pend=`<span class="ph-text">${t('pending_detail')}</span>`;
+  const rows=[
+    ['address',`<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 18s6-5.5 6-10a6 6 0 0 0-12 0c0 4.5 6 10 6 10z"/><circle cx="10" cy="8" r="2"/></svg>`,CONFIG.address?esc(L(CONFIG.address)):pend],
+    ['phone',`<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 3h3l1.5 4-2 1.2a10 10 0 0 0 5.3 5.3L13 11.5l4 1.5v3a1.5 1.5 0 0 1-1.6 1.5C8.6 17 3 11.4 2.5 4.6A1.5 1.5 0 0 1 4 3z"/></svg>`,CONFIG.phone?esc(CONFIG.phone):pend],
+    ['whatsapp',`<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 17l1.2-3.6A7 7 0 1 1 7 16z"/></svg>`,CONFIG.whatsapp?esc('+'+CONFIG.whatsapp):pend],
+    ['hours',`<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="7.5"/><path d="M10 6v4l3 2"/></svg>`,CONFIG.hours?esc(L(CONFIG.hours)):pend]
+  ];
+  $('#clist').innerHTML=rows.map(r=>`<li>${r[1]}<span class="k">${t(r[0])}</span><span class="v">${r[2]}</span></li>`).join('');
+  $('#fContact').innerHTML=rows.map(r=>`<li><span class="k" style="color:var(--muted)">${t(r[0])}:</span> ${r[2]}</li>`).join('');
+  $('#mapsBtn').setAttribute('aria-disabled',CONFIG.mapsUrl?'false':'true');
+}
+
+/* ---------- Orbit ---------- */
+function renderOrbit(){
+  const five=[["Vamana","वमन"],["Virechana","विरेचन"],["Basti","बस्ती"],["Nasya","नस्य"],["Raktamokshana","रक्तमोक्षण"]];
+  let g='';
+  five.forEach((n,i)=>{const a=-Math.PI/2+i*2*Math.PI/5;const x=200+150*Math.cos(a),y=200+150*Math.sin(a);
+    g+=`<circle cx="${x}" cy="${y}" r="5" fill="#D7B56F"/><text x="${x}" y="${y+(Math.sin(a)>0.2?26:-14)}" text-anchor="middle">${lang==='mr'?n[1]:n[0]}</text>${lang==='en'?`<text class="dv" x="${x}" y="${y+(Math.sin(a)>0.2?44:-32)}" text-anchor="middle">${n[1]}</text>`:''}`;});
+  $('#orbitSvg').innerHTML=`
+   <g class="spin"><circle cx="200" cy="200" r="182" fill="none" stroke="rgba(242,238,228,.16)" stroke-dasharray="2 7"/><circle cx="382" cy="200" r="3" fill="#D7B56F"/></g>
+   <circle cx="200" cy="200" r="150" fill="none" stroke="rgba(242,238,228,.22)"/>
+   <circle cx="200" cy="200" r="86" fill="none" stroke="rgba(215,181,111,.4)"/>
+   <text x="200" y="124" text-anchor="middle" class="dv">${lang==='mr'?'पूर्वकर्म: स्नेहन · स्वेदन':'Purvakarma · Snehana · Swedana'}</text>
+   <circle cx="200" cy="200" r="52" fill="rgba(215,181,111,.12)" stroke="rgba(215,181,111,.6)"/>
+   <text x="200" y="198" text-anchor="middle" style="font-size:20px">${lang==='mr'?'शोधन':'Shodhana'}</text>
+   <text x="200" y="218" text-anchor="middle" class="dv">${lang==='mr'?'पंचकर्म':'शोधन'}</text>
+   ${g}`;
+}
+
+/* ---------- Selects ---------- */
+function fillSelects(){
+  const docOpts=`<option value="">${t('select_ph')}</option><option value="d1">${t('doc1_opt')}</option><option value="d2">${t('doc2_opt')}</option><option value="any">${t('doc_any')}</option>`;
+  ['#hDoctor','#fDoctor'].forEach(s=>{const el=$(s),v=el.value;el.innerHTML=docOpts;el.value=v});
+  const grp=(cat,label)=>`<optgroup label="${esc(label)}">${T.filter(x=>x.cat===cat).map(x=>`<option value="${x.id}">${esc(names(x)[0])}</option>`).join('')}</optgroup>`;
+  const el=$('#fType'),v=el.value;
+  el.innerHTML=`<option value="">${t('select_ph')}</option><optgroup label="${t('og_consult')}"><option value="general">${t('general')}</option></optgroup>${grp('pk',t('cat_pk'))}${grp('th',t('cat_th'))}${grp('wo',t('cat_wo'))}${grp('ch',t('cat_ch'))}<optgroup label="${t('og_other')}"><option value="product">${t('product_enq')}</option></optgroup>`;
+  el.value=v;
+}
+
+/* ---------- Detail dialog ---------- */
+const dlg=$('#detail');
+let openId=null;
+function openDetail(id){
+  const x=TMAP[id]; if(!x) return; openId=id;
+  const [a,b]=names(x);
+  const rel=(x.rel||[]).map(r=>TMAP[r]).filter(Boolean);
+  $('#detailIn').innerHTML=`
+   <div class="dlg-head">
+     <span class="eyebrow">${t('cat_'+x.cat)}</span>
+     <h2 id="dTitle">${esc(a)}</h2><p class="alt ${lang==='en'?'deva':''}">${esc(b)}</p>
+     <span class="pend" style="align-self:flex-start">${t('pending')}</span>
+     <button class="icon-btn dlg-close" data-close aria-label="${t('close')}">✕</button>
+   </div>
+   <div class="dlg-body">
+     <section><h3>${t('d_intro')}</h3><p>${esc(L(x.d))}</p></section>
+     <section><h3>${t('d_inv')}</h3><p>${esc(L(x.inv))}</p></section>
+     <section><h3>${t('d_ctx')}</h3><p>${esc(L(x.ctx))}</p></section>
+     <section><h3>${t('d_proc')}</h3><ol>${[1,2,3,4,5].map(n=>`<li>${t('proc'+n)}</li>`).join('')}</ol></section>
+     <section><h3>${t('d_who')}</h3><p>${t('who_p')}</p></section>
+     <section><h3>${t('d_prec')}</h3><ul>${x.note?`<li><b>${esc(L(x.note))}</b></li>`:''}${[1,2,3,4].map(n=>`<li>${t('prec'+n)}</li>`).join('')}</ul></section>
+     <section class="full"><h3>${t('d_faq')}</h3>${[1,2,3].map(n=>`<details><summary>${t('faq'+n+'q')}</summary><p>${t('faq'+n+'a')}</p></details>`).join('')}</section>
+     ${rel.length?`<section class="full"><h3>${t('d_rel')}</h3><div class="rel">${rel.map(r=>`<button class="chip" data-open="${r.id}">${esc(names(r)[0])}</button>`).join('')}</div></section>`:''}
+   </div>
+   <div class="dlg-foot"><p class="note">${t('d_review')}</p><div class="row-btns"><button class="btn btn-ghost btn-sm" data-wa="${x.id}">${t('d_wa')}</button><button class="btn btn-primary btn-sm" data-book="${x.id}">${t('d_book')}</button></div></div>`;
+  if(!dlg.open){ if(dlg.showModal) dlg.showModal(); else dlg.setAttribute('open',''); }
+  $('#detailIn').scrollTop=0;
+}
+function closeDlg(d){ if(d.close) d.close(); else d.removeAttribute('open'); if(d===dlg) openId=null; }
+[dlg,$('#priv')].forEach(d=>d.addEventListener('click',e=>{ if(e.target===d) closeDlg(d); }));
+dlg.addEventListener('close',()=>{openId=null});
+
+/* ---------- Navigation ---------- */
+function goTo(id){
+  const el=id==='top'?document.body:document.getElementById(id); if(!el) return;
+  closeDrawer();
+  const y = id==='top'?0:el.getBoundingClientRect().top+window.scrollY-80;
+  window.scrollTo({top:y,behavior:reduce?'auto':'smooth'});
+}
+const drawer=$('#drawer'),menuBtn=$('#menuBtn');
+function closeDrawer(){drawer.hidden=true;menuBtn.setAttribute('aria-expanded','false')}
+menuBtn.addEventListener('click',()=>{const o=drawer.hidden;drawer.hidden=!o;menuBtn.setAttribute('aria-expanded',String(o))});
+drawer.addEventListener('click',e=>{if(e.target===drawer)closeDrawer()});
+
+function book(type,{doctor,date,msg}={}){
+  [dlg,$('#priv')].forEach(d=>{if(d.open)closeDlg(d)});
+  showForm();
+  if(type) $('#fType').value = TMAP[type]||type==='general'||type==='product' ? type : 'general';
+  if(doctor) $('#fDoctor').value=doctor;
+  if(date) $('#fDate').value=date;
+  if(msg!==undefined) $('#fMsg').value=msg;
+  goTo('book');
+  setTimeout(()=>{try{$('#fName').focus({preventScroll:true})}catch(e){}},reduce?0:600);
+}
+function wa(id){
+  if(!CONFIG.whatsapp){toast(t('toast_wa'));return}
+  const x=TMAP[id];const txt=(lang==='mr'?'नमस्कार, मला याविषयी माहिती हवी आहे: ':'Hello, I would like to know more about: ')+(x?names(x)[0]:t('general'));
+  window.open('https://wa.me/'+CONFIG.whatsapp+'?text='+encodeURIComponent(txt),'_blank','noopener');
+}
+
+document.addEventListener('click',e=>{
+  const b=e.target.closest('button,a'); if(!b) return;
+  const d=b.dataset;
+  if(d.go){ if(d.filterGo){tFilter=d.filterGo;renderTChips();renderT();} goTo(d.go); return; }
+  if(d.open){ openDetail(d.open); return; }
+  if(d.book!==undefined){ book(d.book||'general'); return; }
+  if(d.bookDoc){ book('general',{doctor:d.bookDoc}); return; }
+  if(d.penq){ const p=P.find(x=>x.id===d.penq); book('product',{msg:(lang==='mr'?'उत्पादन चौकशी: ':'Product enquiry: ')+names(p)[0]}); return; }
+  if(d.concern!==undefined){ const c=C[+d.concern]; book('general',{msg:(lang==='mr'?'सल्ल्याचे क्षेत्र: ':'Area of concern: ')+(lang==='mr'?c[1]:c[0])}); return; }
+  if(d.wa){ wa(d.wa); return; }
+  if(d.call!==undefined){ if(CONFIG.phone){location.href='tel:'+CONFIG.phone.replace(/\s/g,'')} else toast(t('toast_phone')); return; }
+  if(d.tf){ tFilter=d.tf; renderTChips(); renderT(); return; }
+  if(d.pf){ pFilter=d.pf; renderPChips(); renderP(); return; }
+  if(d.close!==undefined){ closeDlg(b.closest('dialog')); return; }
+  if(d.lang){ setLang(d.lang); return; }
+});
+$('#mapsBtn').addEventListener('click',()=>{ if(CONFIG.mapsUrl) window.open(CONFIG.mapsUrl,'_blank','noopener'); else toast(t('toast_maps')); });
+$('#privBtn').addEventListener('click',()=>{const p=$('#priv'); if(p.showModal)p.showModal(); else p.setAttribute('open','')});
+$('#tSearch').addEventListener('input',renderT);
+$('#pSearch').addEventListener('input',renderP);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDrawer()});
+
+/* ---------- Hero panel ---------- */
+const today=(()=>{const d=new Date();d.setMinutes(d.getMinutes()-d.getTimezoneOffset());return d.toISOString().slice(0,10)})();
+['#hDate','#fDate'].forEach(s=>$(s).min=today);
+$('#heroPanel').addEventListener('submit',e=>{e.preventDefault();book('general',{doctor:$('#hDoctor').value||undefined,date:$('#hDate').value||undefined})});
+
+/* ---------- Booking form ---------- */
+const form=$('#bookForm'), success=$('#success');
+let lastReq=null;
+function showForm(){ form.hidden=false; success.hidden=true; }
+function setErr(id,key){const inp=$('#'+id),err=$('#e'+id.slice(1));err.textContent=key?t(key):'';inp.setAttribute('aria-invalid',key?'true':'false');return !key}
+form.addEventListener('submit',async e=>{
+  e.preventDefault();
+  const name=$('#fName').value.trim(), phoneRaw=$('#fPhone').value.replace(/[\s-]/g,''), doc=$('#fDoctor').value, date=$('#fDate').value, type=$('#fType').value;
+  const phone=phoneRaw.replace(/^(\+91|0091|0)/,'');
+  const ok=[setErr('fName',name.length>=2?null:'e_name'),setErr('fPhone',/^[6-9]\d{9}$/.test(phone)?null:'e_phone'),setErr('fDoctor',doc?null:'e_doc'),setErr('fDate',date&&date>=today?null:'e_date'),setErr('fType',type?null:'e_type')];
+  if(ok.includes(false)){ const first=$$('#bookForm [aria-invalid="true"]')[0]; if(first) first.focus(); return; }
+  lastReq={name,phone,doctor:doc,date,type,message:$('#fMsg').value.trim(),lang};
+  let sent=false;
+  if(CONFIG.bookingEndpoint){
+    try{const r=await fetch(CONFIG.bookingEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(lastReq)});sent=r.ok}catch(err){sent=false}
+  }
+  renderSuccess(sent);
+});
+function reqText(){
+  if(!lastReq) return '';
+  const docTxt={d1:t('doc1_opt'),d2:t('doc2_opt'),any:t('doc_any')}[lastReq.doctor]||'';
+  const typeTxt=TMAP[lastReq.type]?names(TMAP[lastReq.type])[0]:t(lastReq.type==='product'?'product_enq':'general');
+  return [[t('f_name'),lastReq.name],[t('f_phone'),lastReq.phone],[t('panel_doc'),docTxt],[t('panel_date'),lastReq.date],[t('f_type'),typeTxt],[t('f_msg'),lastReq.message||'—']];
+}
+function renderSuccess(sent){
+  const rows=reqText();
+  success.innerHTML=`<div class="success full"><span class="tick"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg></span>
+    <h3>${t('s_h')}</h3><p>${sent?t('s_sent'):t('s_p')}</p>
+    <dl class="summary" id="sumList">${rows.map(r=>`<dt>${esc(r[0])}</dt><dd>${esc(r[1])}</dd>`).join('')}</dl>
+    <div class="row-btns"><button class="btn btn-primary btn-sm" id="copyBtn" type="button">${t('copy')}</button><button class="btn btn-ghost btn-sm" id="editBtn" type="button">${t('edit')}</button></div></div>`;
+  form.hidden=true; success.hidden=false; success.focus({preventScroll:true});
+  $('#copyBtn').addEventListener('click',()=>{
+    const txt=reqText().map(r=>r[0]+': '+r[1]).join('\n');
+    const fallback=()=>{const r=document.createRange();r.selectNodeContents($('#sumList'));const s=getSelection();s.removeAllRanges();s.addRange(r);toast(t('copy_fail'))};
+    try{navigator.clipboard.writeText(txt).then(()=>toast(t('copied')),fallback)}catch(err){fallback()}
+  });
+  $('#editBtn').addEventListener('click',()=>{showForm();$('#fName').focus()});
+}
+
+/* ---------- Language ---------- */
+function applyStatic(){
+  root.lang = lang==='mr'?'mr':'en';
+  $$('[data-i18n]').forEach(el=>{el.textContent=t(el.dataset.i18n)});
+  $$('[data-i18n-html]').forEach(el=>{el.innerHTML=t(el.dataset.i18nHtml)});
+  $$('[data-i18n-ph]').forEach(el=>{el.placeholder=t(el.dataset.i18nPh)});
+  $$('[data-i18n-aria]').forEach(el=>{el.setAttribute('aria-label',t(el.dataset.i18nAria))});
+  $$('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===lang)));
+}
+function renderAll(){
+  applyStatic(); renderTChips(); renderT(); renderPChips(); renderP(); renderC(); renderDocs(); renderGallery(); renderContact(); renderOrbit(); fillSelects();
+  if(openId) openDetail(openId);
+  if(!success.hidden && lastReq) renderSuccess(false);
+}
+function setLang(l){ if(l===lang) return; lang=l; store.set('cv-lang',l); renderAll(); }
+
+/* ---------- Theme ---------- */
+const mq=matchMedia('(prefers-color-scheme: dark)');
+const isDark=()=> root.dataset.theme ? root.dataset.theme==='dark' : mq.matches;
+const savedTheme=store.get('cv-theme'); if(savedTheme==='dark'||savedTheme==='light') root.dataset.theme=savedTheme;
+let sceneTheme=()=>{};
+function syncTheme(){ root.classList.toggle('is-dark',isDark()); sceneTheme(isDark()); }
+$('#themeBtn').addEventListener('click',()=>{
+  const next=isDark()?'light':'dark';
+  root.classList.add('theming'); root.dataset.theme=next; store.set('cv-theme',next);
+  syncTheme(); setTimeout(()=>root.classList.remove('theming'),600);
+});
+mq.addEventListener && mq.addEventListener('change',syncTheme);
+new MutationObserver(syncTheme).observe(root,{attributes:true,attributeFilter:['data-theme']});
+
+/* ---------- Tilt + reveal ---------- */
+const fine=matchMedia('(hover: hover) and (pointer: fine)').matches;
+function bindTilt(){
+  if(reduce||!fine) return;
+  $$('.tilt:not([data-tb])').forEach(el=>{
+    el.dataset.tb='1';
+    el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;el.style.transform=`perspective(900px) rotateX(${(-y*4).toFixed(2)}deg) rotateY(${(x*5).toFixed(2)}deg) translateY(-3px)`});
+    el.addEventListener('pointerleave',()=>{el.style.transform=''});
+  });
+}
+if(!reduce && 'IntersectionObserver' in window){
+  const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}}),{threshold:.15});
+  $$('.reveal').forEach(el=>{ if(el.getBoundingClientRect().top>innerHeight) io.observe(el) });
+}
+
+/* ---------- 3D scene ---------- */
+function initScene(){
+  const wrap=$('#sceneWrap'), canvas=$('#scene');
+  if(!window.THREE){wrap.classList.add('fallback');return}
+  let renderer;
+  try{renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true,powerPreference:'high-performance'})}catch(e){wrap.classList.add('fallback');return}
+  if(!renderer.getContext()){wrap.classList.add('fallback');return}
+  const small=matchMedia('(max-width: 760px)').matches;
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio||1, small?1.5:2));
+  renderer.outputEncoding=THREE.sRGBEncoding;
+  renderer.toneMapping=THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure=1.05;
+  renderer.setClearColor(0x000000,0);
+
+  const scene=new THREE.Scene();
+  const cam=new THREE.PerspectiveCamera(32,1,.1,100);
+  cam.position.set(0,.35,10.5);
+
+  // Environment for copper reflections
+  const pm=new THREE.PMREMGenerator(renderer);
+  const env=new THREE.Scene();
+  const eg=new THREE.SphereGeometry(10,32,16);
+  const cols=[];const c=new THREE.Color();const pa=eg.attributes.position;
+  for(let i=0;i<pa.count;i++){const y=pa.getY(i)/10;c.setRGB(.55+.45*y,.45+.35*y,.32+.2*y);if(y<0)c.setRGB(.08,.14,.11);cols.push(c.r,c.g,c.b)}
+  eg.setAttribute('color',new THREE.Float32BufferAttribute(cols,3));
+  env.add(new THREE.Mesh(eg,new THREE.MeshBasicMaterial({vertexColors:true,side:THREE.BackSide})));
+  const pnl=(x,y,z,w,h,k)=>{const m=new THREE.Mesh(new THREE.PlaneGeometry(w,h),new THREE.MeshBasicMaterial({color:new THREE.Color(k,k*.92,k*.8),side:THREE.DoubleSide}));m.position.set(x,y,z);m.lookAt(0,0,0);env.add(m)};
+  pnl(5,5,6,6,3,4);pnl(-7,2,-3,3,6,1.6);pnl(0,8,0,8,8,1.2);
+  scene.environment=pm.fromScene(env,.04).texture;
+
+  const rootG=new THREE.Group(); scene.add(rootG);
+
+  // Lights
+  const hemi=new THREE.HemisphereLight(0xfff3e0,0x1b3a2f,.55); scene.add(hemi);
+  const key=new THREE.DirectionalLight(0xffe2b8,2.1); key.position.set(3,4,5); scene.add(key);
+  const rim=new THREE.DirectionalLight(0x9bc6a8,1.3); rim.position.set(-4,2,-3); scene.add(rim);
+
+  // Hammered copper texture
+  const tc=document.createElement('canvas');tc.width=tc.height=256;const tx=tc.getContext('2d');
+  tx.fillStyle='#808080';tx.fillRect(0,0,256,256);
+  for(let i=0;i<900;i++){const x=Math.random()*256,y=Math.random()*256,r=3+Math.random()*7;const g=tx.createRadialGradient(x,y,0,x,y,r);const v=Math.random()>.5?200:60;g.addColorStop(0,`rgba(${v},${v},${v},.35)`);g.addColorStop(1,'rgba(128,128,128,0)');tx.fillStyle=g;tx.beginPath();tx.arc(x,y,r,0,7);tx.fill()}
+  const bump=new THREE.CanvasTexture(tc);bump.wrapS=bump.wrapT=THREE.RepeatWrapping;bump.repeat.set(4,2);
+
+  // Vessel (kalash)
+  const prof=[[0,-1.25],[.5,-1.25],[.6,-1.21],[.88,-1],[1.1,-.62],[1.17,-.25],[1.08,.12],[.84,.42],[.56,.62],[.45,.8],[.47,.93],[.62,1.04],[.68,1.1],[.64,1.15],[.5,1.08],[.39,.94],[.37,.82],[0,.82]].map(p=>new THREE.Vector2(p[0],p[1]));
+  const vMat=new THREE.MeshPhysicalMaterial({color:0xc27a4c,metalness:1,roughness:.3,clearcoat:.35,clearcoatRoughness:.35,bumpMap:bump,bumpScale:.012,envMapIntensity:1.15});
+  const vessel=new THREE.Mesh(new THREE.LatheGeometry(prof,small?56:112),vMat);
+  const band=(y,r)=>{const m=new THREE.Mesh(new THREE.TorusGeometry(r,.014,8,small?64:128),new THREE.MeshStandardMaterial({color:0xd9a65c,metalness:1,roughness:.22}));m.rotation.x=Math.PI/2;m.position.y=y;vessel.add(m)};
+  band(-.25,1.172);band(-.62,1.104);band(.62,.565);
+  const vG=new THREE.Group(); vG.add(vessel); vG.position.set(-.35,-.62,1.3); vG.scale.setScalar(.95); rootG.add(vG);
+  // contact shadow
+  const sc=document.createElement('canvas');sc.width=sc.height=128;const sx=sc.getContext('2d');const sg=sx.createRadialGradient(64,64,0,64,64,64);sg.addColorStop(0,'rgba(10,25,20,.55)');sg.addColorStop(1,'rgba(10,25,20,0)');sx.fillStyle=sg;sx.fillRect(0,0,128,128);
+  const shMat=new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(sc),transparent:true,depthWrite:false});
+  const shadow=new THREE.Mesh(new THREE.PlaneGeometry(3.4,3.4),shMat); shadow.rotation.x=-Math.PI/2; shadow.position.set(-.35,-1.83,1.3); rootG.add(shadow);
+
+  // Leaf geometry (curved)
+  const sh=new THREE.Shape();sh.moveTo(0,0);sh.quadraticCurveTo(.36,.42,0,1.1);sh.quadraticCurveTo(-.36,.42,0,0);
+  const leafGeo=new THREE.ShapeGeometry(sh,10);const lp=leafGeo.attributes.position;
+  for(let i=0;i<lp.count;i++){const x=lp.getX(i),y=lp.getY(i);lp.setZ(i,-Math.pow(x,2)*1.6+.12*Math.sin(y*2.6))}
+  leafGeo.computeVertexNormals(); leafGeo.translate(0,-.05,0);
+
+  // Botanical sphere
+  const sG=new THREE.Group(); sG.position.set(.75,.75,-.7); rootG.add(sG);
+  const coreMat=new THREE.MeshStandardMaterial({color:0x234d3d,roughness:.9});
+  sG.add(new THREE.Mesh(new THREE.IcosahedronGeometry(1.42,4),coreMat));
+  const N=small?150:280;
+  const leafMat=new THREE.MeshStandardMaterial({roughness:.55,metalness:.05,side:THREE.DoubleSide});
+  const inst=new THREE.InstancedMesh(leafGeo,leafMat,N);
+  const dm=new THREE.Object3D(); const ga=Math.PI*(3-Math.sqrt(5));
+  const greens=[0x2f6b52,0x4f8b70,0x3c7a5e,0x6c9e7f,0x245f4c,0x8db59a];
+  for(let i=0;i<N;i++){const y=1-(i/(N-1))*2,r=Math.sqrt(1-y*y),th=ga*i;const p=new THREE.Vector3(Math.cos(th)*r,y,Math.sin(th)*r).multiplyScalar(1.4);
+    dm.position.copy(p);dm.lookAt(p.clone().multiplyScalar(2));dm.rotateZ(Math.random()*Math.PI*2);dm.rotateX(-.35-Math.random()*.5);dm.scale.setScalar(.38+Math.random()*.26);dm.updateMatrix();inst.setMatrixAt(i,dm.matrix);inst.setColorAt(i,new THREE.Color(greens[i%greens.length]))}
+  inst.instanceMatrix.needsUpdate=true; if(inst.instanceColor) inst.instanceColor.needsUpdate=true;
+  sG.add(inst);
+  // gold meridian
+  const mer=new THREE.Mesh(new THREE.TorusGeometry(1.95,.006,6,180),new THREE.MeshStandardMaterial({color:0xd7b56f,metalness:1,roughness:.3}));mer.rotation.set(1.2,.3,0);sG.add(mer);
+
+  // Floating leaves
+  const fl=[];const flMat=[new THREE.MeshStandardMaterial({color:0x4f8b70,roughness:.5,side:THREE.DoubleSide}),new THREE.MeshStandardMaterial({color:0x9bc6a8,roughness:.5,side:THREE.DoubleSide}),new THREE.MeshStandardMaterial({color:0xb8864b,roughness:.35,metalness:.6,side:THREE.DoubleSide})];
+  for(let i=0;i<(small?7:11);i++){const m=new THREE.Mesh(leafGeo,flMat[i%3]);m.position.set((Math.random()-.5)*6,(Math.random()-.5)*4.2,(Math.random()-.3)*3);m.rotation.set(Math.random()*6,Math.random()*6,Math.random()*6);m.scale.setScalar(.28+Math.random()*.22);m.userData={s:.2+Math.random()*.4,p:Math.random()*6,b:m.position.clone()};rootG.add(m);fl.push(m)}
+
+  // Gold dust
+  const PN=small?220:600;const pg=new THREE.BufferGeometry();const pp=new Float32Array(PN*3);
+  for(let i=0;i<PN;i++){pp[i*3]=(Math.random()-.5)*9;pp[i*3+1]=(Math.random()-.5)*7;pp[i*3+2]=(Math.random()-.5)*5}
+  pg.setAttribute('position',new THREE.BufferAttribute(pp,3));
+  const dc=document.createElement('canvas');dc.width=dc.height=64;const dx=dc.getContext('2d');const dg=dx.createRadialGradient(32,32,0,32,32,32);dg.addColorStop(0,'rgba(255,255,255,1)');dg.addColorStop(.35,'rgba(255,255,255,.5)');dg.addColorStop(1,'rgba(255,255,255,0)');dx.fillStyle=dg;dx.fillRect(0,0,64,64);
+  const pMat=new THREE.PointsMaterial({size:.07,map:new THREE.CanvasTexture(dc),transparent:true,depthWrite:false,color:0xd7b56f});
+  const dust=new THREE.Points(pg,pMat); scene.add(dust);
+
+  sceneTheme=(dark)=>{
+    pMat.color.set(dark?0xd7b56f:0xa87a3f);
+    pMat.blending=dark?THREE.AdditiveBlending:THREE.NormalBlending; pMat.opacity=dark?.9:.75; pMat.needsUpdate=true;
+    hemi.intensity=dark?.35:.6; key.intensity=dark?1.7:2.1; rim.intensity=dark?1.8:1.1;
+    coreMat.color.set(dark?0x13302a:0x2a5a47);
+    shMat.opacity=dark?1:.7;
+    renderer.toneMappingExposure=dark?1.1:1.02;
+    if(still) render();
+  };
+
+  let w=0,h=0;
+  function resize(){const r=wrap.getBoundingClientRect();if(!r.width)return;w=r.width;h=r.height;renderer.setSize(w,h,false);cam.aspect=w/h;cam.fov=w<500?38:32;cam.updateProjectionMatrix();if(still)render()}
+  let mx=0,my=0,tx2=0,ty2=0;
+  window.addEventListener('pointermove',e=>{tx2=e.clientX/innerWidth-.5;ty2=e.clientY/innerHeight-.5},{passive:true});
+  const still=reduce;
+  let t0=performance.now(), visible=true, raf=0;
+  function render(time){
+    const t=((time||performance.now())-t0)/1000;
+    mx+=(tx2-mx)*.04; my+=(ty2-my)*.04;
+    if(!still){
+      sG.rotation.y=t*.09; sG.rotation.x=Math.sin(t*.2)*.08;
+      vG.position.y=-.62+Math.sin(t*.8)*.06; vessel.rotation.y=t*.18;
+      shadow.scale.setScalar(1-Math.sin(t*.8)*.04);
+      fl.forEach(m=>{const u=m.userData;m.position.y=u.b.y+Math.sin(t*u.s+u.p)*.35;m.position.x=u.b.x+Math.cos(t*u.s*.7+u.p)*.2;m.rotation.x+=.003;m.rotation.y+=.004});
+      dust.rotation.y=t*.02; dust.position.y=Math.sin(t*.15)*.15;
+      cam.position.x=Math.sin(t*.12)*.35+mx*.6; cam.position.y=.35+Math.cos(t*.1)*.15-my*.35;
+      const sy=Math.min(window.scrollY,800); rootG.position.y=sy*.0012; rootG.rotation.y=mx*.25;
+    }
+    cam.lookAt(0,0,0);
+    renderer.render(scene,cam);
+  }
+  function loop(time){ if(!visible){raf=0;return} render(time); raf=requestAnimationFrame(loop); }
+  new ResizeObserver(resize).observe(wrap); resize();
+  sceneTheme(isDark());
+  if(still){ render(); return; }
+  new IntersectionObserver(es=>{visible=es[0].isIntersecting; if(visible&&!raf) raf=requestAnimationFrame(loop)}).observe(wrap);
+  document.addEventListener('visibilitychange',()=>{visible=!document.hidden; if(visible&&!raf) raf=requestAnimationFrame(loop)});
+  raf=requestAnimationFrame(loop);
+}
+
+/* ---------- Nav: mark the section in view ---------- */
+(function(){
+  const links=$$('.nav-links button[data-go]:not([data-filter-go])');
+  const ids=links.map(b=>b.dataset.go);
+  const secs=$$('main > section[id]');
+  let tick=false;
+  function update(){
+    tick=false; let cur=null;
+    for(const s of secs){ if(s.getBoundingClientRect().top<=120) cur=s.id; else break; }
+    links.forEach(b=>{ if(b.dataset.go===cur && ids.includes(cur)) b.setAttribute('aria-current','true'); else b.removeAttribute('aria-current'); });
+  }
+  window.addEventListener('scroll',()=>{ if(!tick){tick=true;requestAnimationFrame(update)} },{passive:true});
+  update();
+})();
+
+/* ---------- boot ---------- */
+renderAll();
+syncTheme();
+try{ initScene(); syncTheme(); }catch(e){ $('#sceneWrap').classList.add('fallback'); }
+const hideLoader=()=>$('#loader').classList.add('done');
+if(document.readyState==='complete') setTimeout(hideLoader,300); else window.addEventListener('load',()=>setTimeout(hideLoader,250));
+})();
+</script>
+</body>
+</html>
